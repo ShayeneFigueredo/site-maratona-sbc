@@ -1,0 +1,21 @@
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-card: #141414;
+  --neon-blue: #56c5ff;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}

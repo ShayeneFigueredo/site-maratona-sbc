@@ -1,0 +1,69 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --neon-blue: #56c5ff;
+  --card: #1a1a1a;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: white;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 10%;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 1.5rem 0;
+}
+
+.btn-primary {
+  background: var(--neon-blue);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  background: var(--card);
+  margin: 2rem 5%;
+  padding: 3rem;
+  border-radius: 30px;
+}
+
+.stat-item h2 {
+  color: var(--neon-blue);
+  font-size: 2.5rem;
+  margin: 0;
+}
