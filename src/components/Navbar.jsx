@@ -5,8 +5,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Zap size={24} color="#a3ff47" fill="#a3ff47" />
-        <span>Creatix</span>
+        <span>MARATONA SBC DE PROGRAMAÇÃO</span>
       </div>
       <div className="nav-links">
         <a href="#">About Us</a>

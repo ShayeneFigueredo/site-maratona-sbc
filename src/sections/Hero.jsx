@@ -1,18 +1,50 @@
+import React from "react";
+import sbc from "../assets/sbc.webp";
+import maratona from "../assets/maratona.png";
+import facom from "../assets/facom.png"; 
+
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <span className="badge">★ 10 Years Experience</span>
-        <h1>Empowering Brands <br/> Through Creative Solutions</h1>
-        <p>From web development to branding, we deliver innovative strategies that elevate your brand and drive growth.</p>
-        <div className="hero-btns">
-          <button className="btn-primary">Start Your Project</button>
-          <button className="btn-secondary">Let's Collaborate</button>
+      <div className="hero-container"> 
+        
+
+        <div className="hero-text-col">
+          <span className="badge"> O maior evento de programação competitiva da América Latina! </span>
+          <h1> 31º MARATONA SBC DE <br/> PROGRAMAÇÃO 2026 </h1>
+          
+          <div className="hero-btns">
+             <button className="btn-saiba-mais">
+                Saiba mais
+              </button>
+          </div>
+
         </div>
-      </div>
-      <div className="hero-image-box">
-         {/* Coloque uma imagem aqui depois */}
-         <div className="image-placeholder"></div>
+
+       <div className="hero-logos-col">
+  <div className="realizacao-container">
+    
+    <div className="realizacao-item">
+              <img src={sbc} alt="SBC" />
+              <span className="realizacao-label">REALIZAÇÃO</span>
+              <span className="realizacao-nome">SBC</span>
+            </div>
+
+            <div className="realizacao-item">
+              <img src={maratona} alt="Maratona SBC" />
+              <span className="realizacao-label">PROMOÇÃO</span>
+              <span className="realizacao-nome">MARATONA</span>
+            </div>
+
+            <div className="realizacao-item">
+              <img src={facom} alt="FACOM UFU" />
+              <span className="realizacao-label">ORGANIZAÇÃO</span>
+              <span className="realizacao-nome">FACOM-UFU</span>
+            </div>
+
+  </div>
+</div>
+
       </div>
     </section>
   );
