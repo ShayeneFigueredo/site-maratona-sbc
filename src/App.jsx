@@ -14,9 +14,6 @@ function App() {
   return (
     <div className="app-container">
       {/* Teste de cor para ver se o texto aparece */}
-      <h1 style={{ color: "white", textAlign: "center", marginTop: "20px" }}>
-        🚀 O App está vivo!
-      </h1>
       
       <Navbar />
       <Hero />
