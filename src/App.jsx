@@ -22,8 +22,9 @@ function App() {
       <Stats />
       <About />
       <Programacao />
-      <Fotter />
       <FinalBrasileira />
+       <Fotter />
+
       
     </div>
   );
