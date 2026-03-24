@@ -30,18 +30,25 @@ export default function SobreMaratona() {
             <p>
               A Maratona SBC de Programação, promovida pela Sociedade Brasileira de Computação (SBC), 
               é uma competição nacional que reúne estudantes de Computação em uma batalha contra o 
-              tempo para resolver problemas complexos com criatividade, estratégia e trabalho em equipe. 
+              tempo para resolver problemas complexos com criatividade, estratégia e trabalho em equipe.
+            </p>
+            <p>
               Várias instituições de ensino superior do Brasil desenvolvem competições locais para escolher 
               seus melhores times. Os melhores na Final Nacional (regional latino-americana) são 
               selecionados para participarem das Finais Latino-Americanas do evento, a "Programadores de 
               América", onde são selecionados os times que representam a América Latina nas finais mundiais 
               do ICPC. O ICPC conta com mais de 400.000 alumni, e nos últimos anos reúne participantes de 
-              mais de 100 países, 3.500 universidades e 75.000 competidores e voluntários. Na América Latina 
-              já tivemos mais de 100.000 participações de estudantes na regional, dos quais aproximadamente 
+              mais de 100 países, 3.500 universidades e 75.000 competidores e voluntários. 
+            </p>
+            <p>
+            Na América Latina já tivemos mais de 100.000 participações de estudantes na regional, dos quais aproximadamente 
               um terço são brasileiros. Os times são compostos por três estudantes, que tentarão resolver 
               durante cinco horas o maior número possível dos dez ou mais problemas fornecidos. Eles têm à 
               sua disposição apenas um computador e material impresso, para vencer a batalha contra o 
-              relógio e a prova proposta. Os competidores devem colaborar para descobrir os problemas mais 
+              relógio e a prova proposta. 
+            </p>
+            <p>
+              Os competidores devem colaborar para descobrir os problemas mais 
               fáceis, projetar os testes e construir as soluções que sejam aprovadas pelos juízes. Certos 
               problemas requerem apenas compreensão, outros conhecimentos de técnicas mais sofisticadas, 
               e alguns podem ser realmente muito difíceis de serem resolvidos.

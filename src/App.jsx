@@ -7,6 +7,7 @@ import About from "./sections/About";
 import Programacao from "./sections/programacao";
 import Fotter from "./sections/Footer"; 
 
+import FinalBrasileira from "./sections/FinalBrasileira";
 
 
 import "./styles/App.css"; 
@@ -22,6 +23,7 @@ function App() {
       <About />
       <Programacao />
       <Fotter />
+      <FinalBrasileira />
       
     </div>
   );
