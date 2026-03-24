@@ -1,5 +1,4 @@
 import React from "react";
-import { Zap } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -8,10 +7,9 @@ export default function Navbar() {
         <span>MARATONA SBC DE PROGRAMAÇÃO</span>
       </div>
       <div className="nav-links">
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Reviews</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#final2026">Final 2026</a>
+        <a href="#programacao">Programação</a>
       </div>
     </nav>
   );

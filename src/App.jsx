@@ -6,9 +6,7 @@ import Logos from "./sections/logos-section";
 import About from "./sections/About"; 
 import Programacao from "./sections/programacao";
 import Fotter from "./sections/Footer"; 
-
 import FinalBrasileira from "./sections/FinalBrasileira";
-
 
 import "./styles/App.css"; 
 
@@ -20,11 +18,20 @@ function App() {
       <Hero />
       <Logos/>
       <Stats />
-      <About />
-      <Programacao />
-      <FinalBrasileira />
-       <Fotter />
-
+      
+      <div id="sobre">
+        <About />
+      </div>
+      
+      <div id="final2026">
+        <FinalBrasileira />
+      </div>
+      
+      <div id="programacao">
+        <Programacao />
+      </div>
+      
+      <Fotter />
       
     </div>
   );

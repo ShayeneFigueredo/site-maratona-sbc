@@ -20,7 +20,10 @@ export default function FinalBrasileira() {
         {/* Card FACOM */}
         <div className="info-card">
           <div className="card-image-container">
-            <img src={imgFacom} alt="Fachada da FACOM UFU" className="card-img" />
+            {/* Imagem agora é um link clicável */}
+            <a href="https://facom.ufu.br/" target="_blank" rel="noopener noreferrer">
+              <img src={imgFacom} alt="Fachada da FACOM UFU" className="card-img" />
+            </a>
           </div>
           <div className="card-content">
             <h3>Sobre a FACOM</h3>
@@ -36,7 +39,10 @@ export default function FinalBrasileira() {
         {/* Card SBC */}
         <div className="info-card">
           <div className="card-image-container">
-            <img src={imgSbc} alt="Logo da Sociedade Brasileira de Computação" className="card-img" />
+            {/* Imagem agora é um link clicável */}
+            <a href="https://www.sbc.org.br/" target="_blank" rel="noopener noreferrer">
+              <img src={imgSbc} alt="Logo da Sociedade Brasileira de Computação" className="card-img" />
+            </a>
           </div>
           <div className="card-content">
             <h3>Sobre a SBC</h3>
@@ -50,7 +56,16 @@ export default function FinalBrasileira() {
       </div>
       
       <div className="final-action">
-        <button className="btn-primary">Ver conteúdo completo no site da SBC</button>
+        {/* O Botão agora é um link real que leva para o site da Maratona */}
+        <a 
+          href="https://maratona.sbc.org.br/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-primary"
+          style={{ textDecoration: 'none', display: 'inline-block' }}
+        >
+          Ver conteúdo completo no site da Maratona
+        </a>
       </div>
     </section>
   );
