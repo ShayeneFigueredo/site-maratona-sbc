@@ -126,6 +126,7 @@ body {
   transform: scale(1.1);
 }
 
+
 /* --- Section: Hero --- */
 .hero {
   background-image: url('../assets/bgfundoheder.png'); 
@@ -152,24 +153,58 @@ body {
   text-align: left; 
 }
 
+/* Nova classe para a logo principal */
+.hero-main-logo {
+  margin: 2rem 0;
+  max-width: 450px;
+}
+
+.hero-main-logo img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
 .hero-logos-col {
-  flex: 1; 
-  background-color: rgba(255, 255, 255, 0.05); 
-  backdrop-filter: blur(8px); 
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(12px);
   padding: 40px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
+  position: relative; 
+  overflow: hidden;
+  border: none; 
 }
 
-.hero h1 {
-  font-family: 'Anta', sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  margin: 1.5rem 0;
-  font-weight: 700;
+.hero-logos-col::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 3px; 
+  
+  background: linear-gradient(
+    135deg,
+    #00ffff 0%,   
+    #0044ff 33%,  
+    #9900ff 66%,  
+    #ECAA0B 100%  
+  );
+  
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  pointer-events: none;
+  z-index: 0;
 }
 
-hero-glass-block {
+.hero-glass-block {
   background: rgba(13, 17, 23, 0.4);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -192,6 +227,20 @@ hero-glass-block {
   align-items: center;
   text-align: center;
   flex: 1;
+}
+
+/* Nova classe para o grid das logos FACOM + UFU */
+.org-logos-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  margin-bottom: 10px;
+}
+
+.org-logos-grid img {
+  max-height: 50px !important;
+  width: auto;
 }
 
 .realizacao-item img {
@@ -323,15 +372,11 @@ hero-glass-block {
 
 .glass-neon-number {
   font-family: 'Anta', sans-serif; 
-  font-size: 150px;
-  font-weight: 300px;
-  position: relative;
+  font-weight: 300; /* Removi o 'px' daqui */
+  position: relative; /* Removi o 'x' que estava aqui */
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.019) 100%);
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.5px #ffffff; 
-  filter: drop-shadow(0 0 15px rgba(0, 68, 255, 0.6)) drop-shadow(0 0 30px rgba(0, 76, 255, 0.3));
-  transition: transform 0.3s ease;
 }
 
 .glass-neon-number:hover {
@@ -935,10 +980,6 @@ hero-glass-block {
     font-size: 2.5rem;
   }
 
-  .hero-logos-col {
-    padding: 20px;
-    margin-bottom: 40px; 
-  }
 
   .logos-section {
     border-top-left-radius: 50px;
