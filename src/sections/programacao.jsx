@@ -25,6 +25,8 @@ export default function Programacao() {
     }
   ];
 
+  const themeColors = ["cyan", "blue", "purple", "orange"];
+
   return (
     <section className="schedule-section">
       <div className="container">
@@ -33,18 +35,14 @@ export default function Programacao() {
 
         <div className="schedule-grid">
           {dadosProgramacao.map((item, index) => (
-            <div key={index} className="schedule-card teaser-mode">
+            <div key={index} className={`schedule-card teaser-mode theme-${themeColors[index]}`}>
               
-              {/* 1. CABEÇALHO (VISÍVEL E NÍTIDO) */}
               <div className="card-header-visible">
                 <span className="card-date-visible">{item.date}</span>
                 <span className="card-time-visible">{item.time}</span>
               </div>
 
-              {/* 2. ÁREA DO CONTEÚDO BLOQUEADO (RELATIVO) */}
               <div className="locked-content-area">
-                
-                {/* CONTEÚDO OBSCURECIDO (BLUR) */}
                 <div className="card-body-blurred">
                   <p className="card-description-blurred">
                     {item.description}
@@ -52,7 +50,6 @@ export default function Programacao() {
                   <button className="btn-mais-info-fake">Mais informações</button>
                 </div>
 
-                {/* CAMADA DO CADEADO (GLASS SOBRE O BODY) */}
                 <div className="lock-overlay-teaser">
                   <BsLockFill className="lock-icon-teaser" />
                   <span className="coming-soon-text-teaser">EM BREVE</span>
