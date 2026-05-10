@@ -421,7 +421,8 @@ body {
   text-transform: uppercase;
 }
 
-/* --- Section: About --- */
+/*-- Section About -- */
+
 .sobre-section {
   padding: 40px 80px; 
   color: #ffffff; 
@@ -429,6 +430,47 @@ body {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative; /* Importante para o posicionamento dos itens decorativos */
+}
+
+.decor-item {
+  position: absolute;
+  z-index: -1; /* Garante que fiquem atrás do texto */
+  pointer-events: none; /* Evita que o mouse interaja com as imagens */
+  opacity: 0.8;
+}
+
+.decor-line-orange {
+  top: 5%;
+  right: -150px;
+  width: 540px;
+}
+
+.decor-balao-laranja {
+  top: 110%;
+  right: -8%;
+  width: 110px;
+  animation: flutuar-sobre 6s ease-in-out infinite;
+}
+
+.decor-grupo-baloes {
+  bottom: 25%;
+  left: -12%;
+  width: 140px;
+  animation: flutuar-sobre 8s ease-in-out infinite reverse;
+}
+
+.decor-balao3 {
+  top: 250%;
+  right: -10%;
+  width: 150px;
+  animation: flutuar-sobre 7s ease-in-out infinite;
+}
+
+@keyframes flutuar-sobre {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
 .sobre-header {
@@ -447,7 +489,7 @@ body {
 
 .icone-balao {
   font-size: 28px; 
-  color: #ecf5ff; 
+  color: #ffffff; 
   margin-bottom: 8px; 
 }
 
@@ -461,17 +503,18 @@ body {
   display: flex;
   flex-direction: column; 
   gap: 15px; 
+  align-items: center;
+  justify-content: center;
 }
 
 .sobre-linha-superior {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: center; 
   gap: 50px; 
 }
 
 .paragrafo-principal {
-  flex: 0 0 70%;
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
@@ -486,15 +529,6 @@ body {
   margin-bottom: 0;
 }
 
-.img-competicao-vertical {
-  flex: 1; 
-  max-width: 25%; 
-  aspect-ratio: 3 / 4; 
-  height: auto;
-  border-radius: 16px; 
-  object-fit: cover; 
-}
-
 .img-turma-horizontal-larga {
   width: 100%; 
   height: 280px; 
@@ -503,6 +537,11 @@ body {
   margin-top: 0; 
 }
 
+@media (max-width: 1024px) {
+  .decor-item {
+    opacity: 0.2; 
+  }
+}
 /* --- Section: Schedule --- */
 .theme-cyan {
   --card-theme: #00e5ff;
@@ -897,6 +936,12 @@ body {
 .btn-agenda-fake:hover {
   border-color: var(--neon-purple);
   box-shadow: 0 0 15px rgba(157, 0, 255, 0.3);
+}
+
+.decor-line-yellow {
+  top: 380%;
+  left: -150px;
+  width: 400px;
 }
 
 /* --- Section: Footer --- */

@@ -3,11 +3,22 @@ import { BsBalloonFill } from "react-icons/bs";
 
 import imgbalao1 from "../assets/imgbalao1.png"; 
 import imgbalao2 from "../assets/imgbalao2.png";
+import imgBOrange from "../assets/b-orange.png";
+import imgBaloes from "../assets/baloes.png";
+import imgbalao3 from "../assets/b-yellow.png";
+import imgLineOrange from "../assets/line-orange.png";
 
 export default function SobreMaratona() {
   return (
     <section className="sobre-section">
       
+      {/* ELEMENTOS DECORATIVOS DE FUNDO */}
+      <img src={imgLineOrange} className="decor-item decor-line-orange" alt="" aria-hidden="true" />
+      <img src={imgBOrange} className="decor-item decor-balao-laranja" alt="" aria-hidden="true" />
+      <img src={imgBaloes} className="decor-item decor-grupo-baloes" alt="" aria-hidden="true" />
+      <img src={imgbalao3} className="decor-item decor-balao3" alt="" aria-hidden="true" />
+
+      {/* CONTEÚDO PRINCIPAL */}
       <div className="sobre-header">
         <div className="titulo-container">
           <BsBalloonFill className="icone-balao" />
@@ -38,7 +49,7 @@ export default function SobreMaratona() {
               selecionados para participarem das Finais Latino-Americanas do evento, a "Programadores de 
               América", onde são selecionados os times que representam a América Latina nas finais mundiais 
               do ICPC. O ICPC conta com mais de 400.000 alumni, e nos últimos anos reúne participantes de 
-              mais de 100 países, 3.500 universidades e 75.000 competidores e voluntários. 
+              mais de 100 países, 3.500 universities e 75.000 competidores e voluntários. 
             </p>
             <p>
             Na América Latina já tivemos mais de 100.000 participações de estudantes na regional, dos quais aproximadamente 
@@ -54,12 +65,6 @@ export default function SobreMaratona() {
               e alguns podem ser realmente muito difíceis de serem resolvidos.
             </p>
           </div>
-          
-          <img 
-            src={imgbalao1} 
-            alt="Estudantes competindo na Maratona" 
-            className="img-competicao-vertical" 
-          />
         </div>
 
         <img 

@@ -1,10 +1,14 @@
 import React from "react";
 import imgFacom from "../assets/facom.png";
 import imgSbc from "../assets/sbc.webp"; 
+import imgLineYellow from "../assets/line-yellow.png";
+
+
 
 export default function FinalBrasileira() {
   return (
     <section className="final-section">
+      <img src={imgLineYellow} className="decor-item decor-line-yellow" alt="" aria-hidden="true" />
       <div className="final-header">
         <h2>Final Brasileira 2026</h2>
         <div className="underline"></div>
