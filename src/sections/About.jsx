@@ -1,12 +1,14 @@
 import React from "react";
 import { BsBalloonFill } from "react-icons/bs"; 
 
+// Importações das imagens
 import imgbalao1 from "../assets/imgbalao1.png"; 
 import imgbalao2 from "../assets/imgbalao2.png";
 import imgBOrange from "../assets/b-orange.png";
 import imgBaloes from "../assets/baloes.png";
 import imgbalao3 from "../assets/b-yellow.png";
 import imgLineOrange from "../assets/line-orange.png";
+import imgSabia from "../assets/sabia-voando.png"; 
 
 export default function SobreMaratona() {
   return (
@@ -17,6 +19,7 @@ export default function SobreMaratona() {
       <img src={imgBOrange} className="decor-item decor-balao-laranja" alt="" aria-hidden="true" />
       <img src={imgBaloes} className="decor-item decor-grupo-baloes" alt="" aria-hidden="true" />
       <img src={imgbalao3} className="decor-item decor-balao3" alt="" aria-hidden="true" />
+      <img src={imgSabia} className="decor-sabia" alt="" aria-hidden="true" />
 
       {/* CONTEÚDO PRINCIPAL */}
       <div className="sobre-header">
@@ -48,15 +51,12 @@ export default function SobreMaratona() {
               seus melhores times. Os melhores na Final Nacional (regional latino-americana) são 
               selecionados para participarem das Finais Latino-Americanas do evento, a "Programadores de 
               América", onde são selecionados os times que representam a América Latina nas finais mundiais 
-              do ICPC. O ICPC conta com mais de 400.000 alumni, e nos últimos anos reúne participantes de 
-              mais de 100 países, 3.500 universities e 75.000 competidores e voluntários. 
+              do ICPC.
             </p>
             <p>
-            Na América Latina já tivemos mais de 100.000 participações de estudantes na regional, dos quais aproximadamente 
+              Na América Latina já tivemos mais de 100.000 participações de estudantes na regional, dos quais aproximadamente 
               um terço são brasileiros. Os times são compostos por três estudantes, que tentarão resolver 
-              durante cinco horas o maior número possível dos dez ou mais problemas fornecidos. Eles têm à 
-              sua disposição apenas um computador e material impresso, para vencer a batalha contra o 
-              relógio e a prova proposta. 
+              durante cinco horas o maior número possível dos dez ou mais problemas fornecidos.
             </p>
             <p>
               Os competidores devem colaborar para descobrir os problemas mais 

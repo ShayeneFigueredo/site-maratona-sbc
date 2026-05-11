@@ -3,7 +3,7 @@ import sbc from "../assets/sbc.webp";
 import maratona from "../assets/maratona.png";
 import facom from "../assets/facom.png";
 import ufu from "../assets/logoufu.png";
-import logoPrincipal from "../assets/logomaratona.png"; // A logo que substituirá o texto
+import logoPrincipal from "../assets/logomaratona.png"; 
 
 export default function Hero() {
   return (

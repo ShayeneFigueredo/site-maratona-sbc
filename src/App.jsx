@@ -6,7 +6,7 @@ import Stats from "./sections/Stats";
 import Logos from "./sections/logos-section";
 import About from "./sections/About"; 
 import Programacao from "./sections/programacao";
-import Fotter from "./sections/Footer"; 
+import Fotter from "./sections/Footer"; // Verifique se o arquivo se chama Footer ou Fotter
 import FinalBrasileira from "./sections/FinalBrasileira";
 import Patrocinadores from "./pages/Patrocinadores";
 import Organizadores from "./pages/Organizadores";
@@ -33,33 +33,21 @@ function Home() {
   }, [hash]);
 
   return (
-    <>
-      <Hero />
-      <Logos/>
-      <Stats />
-      
-      <div id="sobre">
-        <About />
-      </div>
-      
-      <div id="final2026">
-        <FinalBrasileira />
-      </div>
-      
-      <div id="programacao">
-        <Programacao />
-      </div>
+  <>
+    <Hero />
+    <Logos />
+    <Stats />
+    <div id="sobre"><About /></div>
+    <div id="final2026"><FinalBrasileira /></div>
+    <div id="programacao"><Programacao /></div>
+    <div id="locais"> 
+      <Locais />
+    </div>
 
-      {/* Eles aparecem na rolagem da Home */}
-      <div id="patrocinadores">
-        <Patrocinadores />
-      </div>
-      
-      <div id="contato">
-        <Contato />
-      </div>
-    </>
-  );
+    <div id="patrocinadores"><Patrocinadores /></div>
+    <div id="contato"><Contato /></div>
+  </>
+);
 }
 
 function App() {
@@ -69,11 +57,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          
-          {/* Eles TAMBÉM existem como páginas separadas nas rotas! */}
           <Route path="/patrocinadores" element={<Patrocinadores />} />
           <Route path="/contato" element={<Contato />} />
-          
           <Route path="/organizadores" element={<Organizadores />} />
           <Route path="/locais" element={<Locais />} />
         </Routes>

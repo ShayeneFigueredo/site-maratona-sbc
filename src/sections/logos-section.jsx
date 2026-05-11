@@ -1,71 +1,57 @@
 import React from "react";
-import huawei from "../assets/logos-patrocinador/huawei.webp";
-import jetbrains from "../assets/logos-patrocinador/jetbrains.webp";
-import incognia from "../assets/logos-patrocinador/incognia.webp";
-import stone from "../assets/logos-patrocinador/stone.png";
-import alphabo from "../assets/logos-patrocinador/alphabot.avif";
-import imgSabia from "../assets/sabia-voando.png";
+import "../styles/App.css"; 
 
-export default function Logos() {
+import imgHuawei from "../assets/logos-patrocinador/huawei-edit.png";
+import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
+import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
+import imgStone from "../assets/logos-patrocinador/stone-edit.png";
+import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
+import imgSabia from "../assets/sabia-voando.png"; 
+
+
+
+export default function LogosSection() {
   return (
     <section className="logos-section">
-
-      <img src={imgSabia} className="decor-item decor-sabia" alt="" aria-hidden="true" />
-      
-      <p className="logos-title">Patrocinadores Oficiais</p>
+      <h2 className="logos-title">Nossos Patrocinadores</h2>
 
       <div className="logos-carousel">
         <div className="logos-track">
-          {/* --- PRIMEIRA SEQUÊNCIA --- */}
+          
+          
           <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">
-            <img src={huawei} alt="Huawei" />
+            <img src={imgHuawei} alt="Huawei" />
           </a>
           <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
-            <img src={jetbrains} alt="JetBrains" />
+            <img src={imgJetbrains} alt="Jetbrains" />
           </a>
           <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer">
-            <img src={incognia} alt="Incognia" />
+            <img src={imgIncognia} alt="Incognia" />
           </a>
           <a href="https://www.stone.com.br/" target="_blank" rel="noopener noreferrer">
-            <img src={stone} alt="Stone" />
+            <img src={imgStone} alt="Stone" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src={alphabo} alt="Alphabo" />
+          <a href="https://alphabot.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src={imgAlphabo} alt="Alphabot" />
           </a>
 
-          {/* --- SEGUNDA SEQUÊNCIA (Para o efeito infinito contínuo) --- */}
+         
           <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">
-            <img src={huawei} alt="Huawei" />
+            <img src={imgHuawei} alt="Huawei" />
           </a>
           <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
-            <img src={jetbrains} alt="JetBrains" />
+            <img src={imgJetbrains} alt="Jetbrains" />
           </a>
           <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer">
-            <img src={incognia} alt="Incognia" />
+            <img src={imgIncognia} alt="Incognia" />
           </a>
           <a href="https://www.stone.com.br/" target="_blank" rel="noopener noreferrer">
-            <img src={stone} alt="Stone" />
+            <img src={imgStone} alt="Stone" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src={alphabo} alt="Alphabo" />
+          <a href="https://alphabot.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src={imgAlphabo} alt="Alphabot" />
           </a>
           
-          {/* --- TERCEIRA SEQUÊNCIA (Garante que telas largas não quebrem) --- */}
-          <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">
-            <img src={huawei} alt="Huawei" />
-          </a>
-          <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
-            <img src={jetbrains} alt="JetBrains" />
-          </a>
-          <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer">
-            <img src={incognia} alt="Incognia" />
-          </a>
-          <a href="https://www.stone.com.br/" target="_blank" rel="noopener noreferrer">
-            <img src={stone} alt="Stone" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src={alphabo} alt="Alphabo" />
-          </a>
         </div>
       </div>
     </section>

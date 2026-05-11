@@ -1,8 +1,7 @@
 import React from "react";
 import maratona from "../assets/maratona.png"; 
 
-// Importando os ícones
-import { FaWhatsapp, FaInstagram, FaGlobe, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaGlobe, FaYoutube } from "react-icons/fa";
 import { BsBalloonFill } from "react-icons/bs"; 
 
 export default function Footer() {
@@ -26,10 +25,10 @@ export default function Footer() {
             <h3>INFORMAÇÕES</h3>
           </div>
           <ul>
-            <li><a href="#">Regulamento</a></li>
-            <li><a href="#">Edições Anteriores</a></li>
-            <li><a href="#">Equipe Organizadora</a></li>
-            <li><a href="#">Manual do Diretor</a></li>
+            <li><a href="#regulamento">Regulamento</a></li>
+            <li><a href="#edicoes">Edições Anteriores</a></li>
+            <li><a href="/organizadores">Equipe Organizadora</a></li>
+            <li><a href="#manual">Manual do Diretor</a></li>
           </ul>
         </div>
 
@@ -41,13 +40,13 @@ export default function Footer() {
           </div>
           <ul>
             <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Programação</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#programacao">Programação</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
 
-        {/* COLUNA 4: REDES SOCIAIS (Agora sem o formulário) */}
+        {/* COLUNA 4: REDES SOCIAIS (Agora sem o WhatsApp) */}
         <div className="footer-column newsletter">
           <div className="title-group-footer">
             <BsBalloonFill className="icone-balao" />
@@ -55,10 +54,9 @@ export default function Footer() {
           </div>
           
           <div className="social-icons">
-            <a href="#" className="social-link" aria-label="WhatsApp"><FaWhatsapp /></a>
-            <a href="#" className="social-link" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" className="social-link" aria-label="Website"><FaGlobe /></a>
-            <a href="#" className="social-link" aria-label="Youtube"><FaYoutube /></a>
+            <a href="https://www.instagram.com/maratonadeprogramacao/?hl=pt-br" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://maratona.sbc.org.br/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Website"><FaGlobe /></a>
+            <a href="https://www.youtube.com/@MaratonaSBC" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Youtube"><FaYoutube /></a>
           </div>
         </div>
 

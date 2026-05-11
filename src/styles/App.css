@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* --- Global Reset & Variables --- */
+
 * {
   box-sizing: border-box;
 }
@@ -87,7 +87,7 @@ body {
   right: -100%; 
   width: 250px;
   height: 100vh;
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(18, 4, 82, 0.95);
   backdrop-filter: blur(15px);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -136,6 +136,7 @@ body {
 
 
 /* --- Section: Hero --- */
+
 .hero {
   background-image: url('../assets/bgfundoheder.png'); 
   background-size: cover;
@@ -161,7 +162,6 @@ body {
   text-align: left; 
 }
 
-/* Nova classe para a logo principal */
 .hero-main-logo {
   margin: 2rem 0;
   max-width: 450px;
@@ -172,42 +172,30 @@ body {
   height: auto;
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
 }
+
 .hero-logos-col {
   flex: 1;
   background-color: rgba(255, 255, 255, 0.03); 
   backdrop-filter: blur(12px);
-  padding: 40px;
+  padding: 25px 20px; /* Ajustado para não ocupar espaço excessivo */
   border-radius: 20px;
   text-align: center;
   position: relative; 
   overflow: hidden;
   border: none; 
+  max-width: 500px; /* Limite de tamanho */
 }
 
 .hero-logos-col::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   border-radius: 20px;
   padding: 3px; 
-  
-  background: linear-gradient(
-    135deg,
-    #00ffff 0%,   
-    #0044ff 33%,  
-    #9900ff 66%,  
-    #ECAA0B 100%  
-  );
-  
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  background: linear-gradient(135deg, #00ffff 0%, #0044ff 33%, #9900ff 66%, #ECAA0B 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  
   pointer-events: none;
   z-index: 0;
 }
@@ -217,7 +205,7 @@ body {
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 25px 20px; 
   width: 100%;
   max-width: 550px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -227,6 +215,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+  flex-wrap: wrap; 
+  gap: 15px;
 }
 
 .realizacao-item {
@@ -235,6 +225,7 @@ body {
   align-items: center;
   text-align: center;
   flex: 1;
+  min-width: 120px; 
 }
 
 .org-logos-grid {
@@ -243,17 +234,18 @@ body {
   justify-content: center;
   gap: 15px; 
   margin-bottom: 10px;
+  flex-wrap: wrap; 
 }
 
 .org-logos-grid img {
-  max-height: 50px !important;
+  max-height: 40px !important; 
   width: auto;
 }
 
 .realizacao-item img {
-  max-height: 70px;
+  max-height: 55px; 
   width: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .realizacao-label {
@@ -267,9 +259,30 @@ body {
 
 .realizacao-nome {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px; 
   font-weight: 800;
   font-family: 'Inter', sans-serif;
+}
+
+/* --- Responsividade do Hero para telas menores --- */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column; 
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .hero-text-col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-logos-col {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
 /* --- Section: Logos Carousel --- */
@@ -314,7 +327,7 @@ body {
 }
 
 .logos-track img {
-  height: 40px; 
+  height: 70px; 
   margin: 0 60px; 
   filter: brightness(0) invert(1);
   opacity: 0.5; 
@@ -333,12 +346,7 @@ body {
   100% { transform: translateX(-50%); } 
 }
 
-.decor-sabia {
-  top: 150%;
-  left: 5%;
-  width: 250px;
-  animation: flutuar-sobre 6s ease-in-out infinite;
-}
+
 
 /* --- Section: Stats & Countdown --- */
 .stats-container {
@@ -429,6 +437,24 @@ body {
   text-transform: uppercase;
 }
 
+.decor-sabia {
+  top: 800%;
+  left: 5%;
+  width: 250px;
+  animation: flutuar-sobre 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .decor-sabia {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
 /*-- Section About -- */
 
 .sobre-section {
@@ -438,19 +464,21 @@ body {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative; /* Importante para o posicionamento dos itens decorativos */
+  position: relative;
+  /* Removido o overflow: hidden daqui para não cortar a linha no desktop */
 }
 
 .decor-item {
   position: absolute;
-  z-index: -1; /* Garante que fiquem atrás do texto */
-  pointer-events: none; /* Evita que o mouse interaja com as imagens */
+  z-index: -1; 
+  pointer-events: none; 
   opacity: 0.8;
 }
 
 .decor-line-orange {
   top: 5%;
-  right: -150px;
+  /* Força a imagem a encostar na borda direita da tela no desktop */
+  right: calc(50% - 50vw); 
   width: 540px;
 }
 
@@ -545,11 +573,60 @@ body {
   margin-top: 0; 
 }
 
+/* --- Ajustes para Telas Médias (Tablets) --- */
 @media (max-width: 1024px) {
   .decor-item {
     opacity: 0.2; 
   }
 }
+
+/* --- Ajustes Específicos para Mobile --- */
+@media (max-width: 768px) {
+  .sobre-section {
+    padding: 40px 20px; 
+    overflow: hidden; 
+  }
+
+  .sobre-header, .sobre-linha-superior {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .titulo-container {
+    align-items: center;
+  }
+
+  .decor-balao-laranja,
+  .decor-grupo-baloes,
+  .decor-balao3 {
+    display: none !important;
+  }
+
+  .decor-line-orange {
+    width: 600px !important; 
+    max-width: none; 
+    right: -100px !important; /* Adicionado !important para anular o calc() do desktop */
+    top: 2%; 
+    opacity: 0.15 !important; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --- Section: Schedule --- */
 .theme-cyan {
   --card-theme: #00e5ff;
@@ -845,7 +922,7 @@ body {
 
 .info-card:hover, .schedule-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 229, 255, 0.15);
+  box-shadow: 0 10px 40px rgba(126, 6, 225, 0.3);
 }
 
 .card-image-container {
