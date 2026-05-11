@@ -23,10 +23,12 @@ html {
 }
 
 body {
-  background-color: var(--bg-dark);
+  background: radial-gradient(circle at 50% 0%, #152069 0%, #0c0b4d 50%, #032833 100%) !important;
+  background-attachment: fixed !important; /* Faz o fundo ficar parado enquanto a página rola */
   color: white;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
 }
 
 /* --- Layout Components: Navbar & Sidebar --- */
@@ -235,7 +237,6 @@ body {
   flex: 1;
 }
 
-/* Nova classe para o grid das logos FACOM + UFU */
 .org-logos-grid {
   display: flex;
   align-items: center;
@@ -330,6 +331,13 @@ body {
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } 
+}
+
+.decor-sabia {
+  top: 150%;
+  left: 5%;
+  width: 250px;
+  animation: flutuar-sobre 6s ease-in-out infinite;
 }
 
 /* --- Section: Stats & Countdown --- */

@@ -1,0 +1,142 @@
+.contato-page {
+  position: relative; 
+  overflow: hidden;
+}
+
+.decor-item {
+  position: absolute;
+  z-index: -1; 
+  pointer-events: none; 
+  opacity: 0.8;
+}
+
+@keyframes flutuar-sobre {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.contato-page {
+    padding: 180px 5% 100px;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    position: relative;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+/* --- Borda Neon Gradiente --- */
+.contato-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 24px;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-blue) 33%, var(--neon-purple) 66%, var(--neon-orange) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contato-title {
+    font-family: 'Anta', sans-serif;
+    font-size: 2rem;
+    color: var(--text-main);
+    margin: 0;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contato-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 30px;
+    z-index: 1;
+    max-width: 80%;
+}
+
+/* --- Área do E-mail em Destaque --- */
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px 50px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.email-container:hover {
+    border-color: var(--neon-orange);
+    box-shadow: 0 0 25px rgba(255, 106, 0, 0.2);
+    transform: translateY(-5px);
+    background: rgba(255, 106, 0, 0.05);
+}
+
+.email-icon {
+    font-size: 1.4rem;
+    color: var(--neon-orange);
+    transition: color 0.3s ease;
+}
+
+.email-link {
+    font-size: 1rem;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.email-container:hover .email-link {
+    color: var(--neon-orange);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .contato-page {
+        padding-top: 130px;
+    }
+    .contato-card {
+        padding: 40px 30px;
+    }
+    .contato-title {
+        font-size: 2.2rem;
+    }
+    .contato-subtitle {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+    .email-container {
+        padding: 20px 30px;
+        gap: 15px;
+        flex-direction: column; /* Empilha o ícone e o texto no mobile */
+    }
+    .email-link {
+        font-size: 1.4rem;
+    }
+    .email-icon {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,67 @@
+import React from "react";
+import "../styles/Patrocinadores.css"
+
+// Aqui você vai importar as logos quando colocar na pasta assets
+import imgHuawei from "../assets/logos-patrocinador/huawei-edit.png";
+import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
+import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
+import imgStone from "../assets/logos-patrocinador/stone-edit.png";
+import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
+import imgLineYellow from "../assets/line-yellowpt.png";
+import imgLineOrange from "../assets/line-orangept.png";
+import imgBaloes from "../assets/baloes.png";
+
+export default function Patrocinadores() {
+  return (
+    <section className="patrocinadores-section">
+      <img src={imgLineYellow} className="decor-item decor-line-yellowpt" alt="" aria-hidden="true" />
+      <img src={imgLineOrange} className="decor-item decor-line-orangept" alt="" aria-hidden="true" />
+      <img src={imgBaloes} className="decor-item decor-grupo-baloes" alt="" aria-hidden="true" />
+      <h1 className="page-title">Nossos Patrocinadores</h1>
+
+      {/* --- PATROCINADOR MUNDIAL --- */}
+      <div className="mundial-container">
+        <div className="mundial-header">
+          <h3>Patrocinador Mundial</h3>
+          <span className="destaque-global">Destaque global</span>
+        </div>
+        <div className="mundial-logos">
+          <img src={imgHuawei} alt="Huawei" className="logo-mundial" />
+          <img src={imgJetbrains} alt="Jetbrains" className="logo-mundial" />
+        </div>
+      </div>
+
+      <div className="other-tiers-container">
+        {/* --- DIAMANTE --- */}
+        <div className="tier-section tier-diamante">
+          <div className="tier-badge">Diamante</div>
+          <div className="tier-grid">
+            <div className="sponsor-card-small">
+              <img src={imgIncognia} alt="Incognia" />
+            </div>
+          </div>
+        </div>
+
+        {/* --- PRATA --- */}
+        <div className="tier-section tier-prata">
+          <div className="tier-badge">Prata</div>
+          <div className="tier-grid">
+            <div className="sponsor-card-small">
+              <img src={imgStone} alt="Stone" />
+            </div>
+          </div>
+        </div>
+
+        {/* --- BRONZE --- */}
+        <div className="tier-section tier-bronze">
+          <div className="tier-badge">Bronze</div>
+          <div className="tier-grid">
+            <div className="sponsor-card-small">
+              <img src={imgAlphabo} alt="Alphabo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

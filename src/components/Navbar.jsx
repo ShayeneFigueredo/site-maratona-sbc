@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -12,13 +13,21 @@ export default function Navbar() {
     <>
       <nav className="navbar">
         <div className="logo">
-          <span>MARATONA SBC DE PROGRAMAÇÃO</span>
+          <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <span>MARATONA SBC DE PROGRAMAÇÃO</span>
+          </Link>
         </div>
         
         <div className="nav-links">
-          <a href="#sobre">Sobre</a>
-          <a href="#final2026">Final 2026</a>
-          <a href="#programacao">Programação</a>
+          <Link to="/">Início</Link>
+          <Link to="/#sobre">Sobre</Link>
+          <Link to="/#final2026">Final 2026</Link>
+          <Link to="/#programacao">Programação</Link>
+          
+          <Link to="/patrocinadores">Patrocinadores</Link>
+          <Link to="/organizadores">Organizadores</Link>
+          <Link to="/locais">Locais</Link>
+          <Link to="/contato">Contato</Link>
         </div>
 
         <div className="mobile-menu-icon" onClick={toggleMenu}>
@@ -32,9 +41,14 @@ export default function Navbar() {
           <FaTimes />
         </div>
 
-        <a href="#sobre" onClick={toggleMenu}>Sobre</a>
-        <a href="#final2026" onClick={toggleMenu}>Final 2026</a>
-        <a href="#programacao" onClick={toggleMenu}>Programação</a>
+        <Link to="/" onClick={toggleMenu}>Início</Link>
+        <Link to="/#sobre" onClick={toggleMenu}>Sobre</Link>
+        <Link to="/#final2026" onClick={toggleMenu}>Final 2026</Link>
+        <Link to="/#programacao" onClick={toggleMenu}>Programação</Link>
+        <Link to="/patrocinadores" onClick={toggleMenu}>Patrocinadores</Link>
+        <Link to="/organizadores" onClick={toggleMenu}>Organizadores</Link>
+        <Link to="/locais" onClick={toggleMenu}>Locais</Link>
+        <Link to="/contato" onClick={toggleMenu}>Contato</Link>
       </div>
     </>
   );

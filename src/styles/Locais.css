@@ -1,0 +1,239 @@
+.locais-page {
+    padding: 180px 5% 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+    position: relative; 
+    overflow: hidden;
+}
+
+.decor-item {
+  position: absolute;
+  z-index: -1; 
+  pointer-events: none; 
+  opacity: 0.8;
+}
+
+@keyframes flutuar-sobre {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.locais-header {
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.page-title {
+    font-family: 'Anta', sans-serif;
+    font-size: 3rem;
+    color: var(--text-main);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+.locais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Base com Fundo Escuro */
+.local-card {
+    background: var(--bg-card); /* Volta para o fundo escuro transparente */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent; 
+}
+
+.local-card:hover {
+    transform: translateY(-8px);
+}
+
+/* --- Bordas Neon por Categoria --- */
+/* O segredo aqui é usar o CSS para pegar os cards na ordem (1, 2 e 3) e pintar a borda deles */
+
+/* Card 1: Principal (Laranja) */
+.local-card:nth-child(1) {
+    border-color: rgba(255, 106, 0, 0.5); /* Borda laranja */
+    box-shadow: 0 10px 30px rgba(255, 106, 0, 0.1); /* Brilho laranja embaixo */
+}
+
+/* Card 2: Hospedagem (Ciano) */
+.local-card:nth-child(2) {
+    border-color: rgba(0, 229, 255, 0.5); /* Borda ciano */
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
+}
+
+/* Card 3: Cultura (Roxo) */
+.local-card:nth-child(3) {
+    border-color: rgba(157, 0, 255, 0.5); /* Borda roxa */
+    box-shadow: 0 10px 30px rgba(157, 0, 255, 0.1);
+}
+
+.local-img-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.local-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.local-card:hover .local-img {
+    transform: scale(1.05);
+}
+
+.local-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.local-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 15px; 
+}
+
+.local-nome-link {
+    text-decoration: none;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+    flex: 1; 
+}
+
+.local-nome-link h3 {
+    font-family: 'Anta', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+}
+
+.local-nome-link:hover {
+    color: var(--neon-cyan);
+}
+
+.external-icon {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.local-badge {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-principal {
+    color: var(--neon-orange);
+    border-color: rgba(255, 106, 0, 0.4);
+}
+
+.badge-hospedagem {
+    color: var(--neon-cyan);
+    border-color: rgba(0, 229, 255, 0.4);
+}
+
+.badge-cultura {
+    color: #d47dff;
+    border-color: rgba(157, 0, 255, 0.4);
+}
+
+.local-endereco {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pin-icon {
+    color: var(--neon-blue);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.btn-mapa {
+    margin-top: auto;
+    background: transparent;
+    color: var(--neon-cyan);
+    font-family: 'Anta', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--neon-cyan);
+    box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
+/* Deixando os botões com a cor correspondente de cada card */
+.local-card:nth-child(1) .btn-mapa {
+    color: var(--neon-orange);
+    border-color: var(--neon-orange);
+    box-shadow: inset 0 0 10px rgba(255, 106, 0, 0.1);
+}
+.local-card:nth-child(1) .btn-mapa:hover {
+    background: rgba(255, 106, 0, 0.1);
+    box-shadow: inset 0 0 15px rgba(255, 106, 0, 0.3), 0 0 15px rgba(255, 106, 0, 0.2);
+}
+
+.local-card:nth-child(2) .btn-mapa:hover {
+    background: rgba(0, 229, 255, 0.1);
+    box-shadow: inset 0 0 15px rgba(0, 229, 255, 0.3), 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.local-card:nth-child(3) .btn-mapa {
+    color: #d47dff;
+    border-color: #d47dff;
+    box-shadow: inset 0 0 10px rgba(157, 0, 255, 0.1);
+}
+.local-card:nth-child(3) .btn-mapa:hover {
+    background: rgba(157, 0, 255, 0.1);
+    box-shadow: inset 0 0 15px rgba(157, 0, 255, 0.3), 0 0 15px rgba(157, 0, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .locais-page { padding-top: 130px; }
+    .page-title { font-size: 2.2rem; }
+}
