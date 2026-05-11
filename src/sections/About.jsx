@@ -2,7 +2,6 @@ import React from "react";
 import { BsBalloonFill } from "react-icons/bs"; 
 
 // Importações das imagens
-import imgbalao1 from "../assets/imgbalao1.png"; 
 import imgbalao2 from "../assets/imgbalao2.png";
 import imgBOrange from "../assets/b-orange.png";
 import imgBaloes from "../assets/baloes.png";

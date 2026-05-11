@@ -6,8 +6,6 @@ import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
 import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
 import imgStone from "../assets/logos-patrocinador/stone-edit.png";
 import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
-import imgSabia from "../assets/sabia-voando.png"; 
-
 
 
 export default function LogosSection() {

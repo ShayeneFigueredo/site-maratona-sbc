@@ -17,7 +17,7 @@ export default function Patrocinadores() {
       {/* Imagens Decorativas */}
       <img src={imgLineYellow} className="decor-item decor-line-yellowpt" alt="" aria-hidden="true" />
       <img src={imgLineOrange} className="decor-item decor-line-orangept" alt="" aria-hidden="true" />
-      <img src={imgBaloes} className="decor-item decor-grupo-baloes" alt="" aria-hidden="true" />
+      <img src={imgBaloes} className="decor-item decor-tres-baloes" alt="" aria-hidden="true" />
       
       <h1 className="page-title">Nossos Patrocinadores</h1>
 

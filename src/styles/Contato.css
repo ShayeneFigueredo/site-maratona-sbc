@@ -134,9 +134,9 @@
         flex-direction: column; /* Empilha o ícone e o texto no mobile */
     }
     .email-link {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     .email-icon {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 }

@@ -10,7 +10,6 @@
   min-height: 80vh;
   position: relative; 
   max-width: 1100px;
-  /* Sem overflow: hidden aqui para não cortar as linhas no desktop */
 }
 
 .decor-item {
@@ -23,7 +22,6 @@
 /* LINHA LARANJA - DIREITA */
 .decor-line-orangept {
   top: 400px !important; 
-  /* O calc força a imagem a ir até a borda direita da tela, ignorando o max-width */
   right: calc(50% - 50vw) !important; 
   z-index: -1; 
   opacity: 1 !important; 
@@ -40,10 +38,10 @@
   position: absolute; 
 }
 
-.decor-grupo-baloes {
+.decor-tres-baloes {
   top: 250px !important;
-  left: 12%;
-  width: 140px;
+  left: -15%;
+  width: 190px;
   animation: flutuar-sobre 8s ease-in-out infinite reverse;
   position: absolute;
 }
@@ -267,7 +265,7 @@ a.sponsor-card-small {
   }
 
   /* Oculta os balões no mobile */
-  .decor-grupo-baloes {
+  .decor-tres-baloes {
     display: none !important;
   }
 

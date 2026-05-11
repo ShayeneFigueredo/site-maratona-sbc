@@ -145,6 +145,7 @@ body {
   min-height: 85vh; 
   width: 100%;
   padding-top: 150px; 
+  overflow: hidden;
 }
 
 .hero-container {
@@ -282,6 +283,49 @@ body {
   .hero-logos-col {
     width: 100%;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .realizacao-container {
+    flex-wrap: nowrap; 
+    gap: 5px; 
+    align-items: flex-end; 
+    justify-content: space-between;
+  }
+
+  .realizacao-item {
+    min-width: 0; 
+    flex: 1; 
+  }
+
+  .realizacao-item img {
+    max-height: 35px; 
+    margin-bottom: 5px;
+  }
+
+  .org-logos-grid {
+    gap: 5px; 
+    margin-bottom: 5px;
+    flex-wrap: nowrap; 
+  }
+
+  .org-logos-grid img {
+    max-height: 25px !important; 
+  }
+
+  .realizacao-label {
+    font-size: 8px; 
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .realizacao-nome {
+    font-size: 11px; 
+  }
+
+  .hero-logos-col {
+    padding: 20px 15px; 
   }
 }
 
@@ -438,9 +482,11 @@ body {
 }
 
 .decor-sabia {
-  top: 800%;
-  left: 5%;
-  width: 250px;
+  top: -250px !important;
+  left: -5%;
+  width: 280px;
+  position: absolute;
+  z-index: -1;
   animation: flutuar-sobre 6s ease-in-out infinite;
 }
 
@@ -465,7 +511,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  /* Removido o overflow: hidden daqui para não cortar a linha no desktop */
 }
 
 .decor-item {
@@ -490,9 +535,9 @@ body {
 }
 
 .decor-grupo-baloes {
-  bottom: 25%;
+  bottom: 35%;
   left: -12%;
-  width: 140px;
+  width: 170px;
   animation: flutuar-sobre 8s ease-in-out infinite reverse;
 }
 
@@ -1210,6 +1255,10 @@ body {
 
 @media (max-width: 768px) {
   /* Layout: Navbar & Sidebar */
+  .decor-line-yellow {
+    opacity: 0.15 !important; 
+  }
+
   .navbar {
     width: 90%;
     padding: 15px 25px;
