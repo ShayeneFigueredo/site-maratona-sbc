@@ -1,12 +1,20 @@
 import React from "react";
 import "../styles/Patrocinadores.css";
 
-// Importações das imagens
+// Importações das imagens (Patrocinadores)
 import imgHuawei from "../assets/logos-patrocinador/huawei-edit.png";
 import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
 import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
 import imgStone from "../assets/logos-patrocinador/stone-edit.png";
 import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
+import imgPrefeitura from "../assets/logos-patrocinador/prefeitura.png";
+import imgFutel from "../assets/logos-patrocinador/futel.png";
+import imgPortoMinas from "../assets/logos-patrocinador/portominas.png";
+import imgCapes from "../assets/logos-patrocinador/capes.png";
+import imgCnpq from "../assets/logos-patrocinador/cnpq.png";
+import imgFapemig from "../assets/logos-patrocinador/fapemig.png";
+
+// Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
 import imgLineOrange from "../assets/line-orangept.png";
 import imgBaloes from "../assets/baloes.png";
@@ -14,7 +22,6 @@ import imgBaloes from "../assets/baloes.png";
 export default function Patrocinadores() {
   return (
     <section className="patrocinadores-section">
-      {/* Imagens Decorativas */}
       <img src={imgLineYellow} className="decor-item decor-line-yellowpt" alt="" aria-hidden="true" />
       <img src={imgLineOrange} className="decor-item decor-line-orangept" alt="" aria-hidden="true" />
       <img src={imgBaloes} className="decor-item decor-tres-baloes" alt="" aria-hidden="true" />
@@ -67,6 +74,57 @@ export default function Patrocinadores() {
             </a>
           </div>
         </div>
+
+        {/* ========================================= */}
+        {/* NOVAS SEÇÕES DE APOIO           */}
+        {/* ========================================= */}
+
+        {/* --- APOIO INSTITUCIONAL (Prefeitura) --- */}
+        <div className="tier-section tier-infra">
+          <div className="tier-badge badge-infra">Apoio Institucional</div>
+          <div className="tier-grid">
+            <a href="https://www.uberlandia.mg.gov.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgPrefeitura} alt="Prefeitura de Uberlândia" />
+            </a>
+          </div>
+        </div>
+
+        {/* --- APOIO LOGÍSTICO (FUTEL) --- */}
+        <div className="tier-section tier-logistico">
+          <div className="tier-badge badge-logistico">Apoio Logístico</div>
+          <div className="tier-grid">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgFutel} alt="FUTEL" />
+            </a>
+          </div>
+        </div>
+
+        {/* --- APOIO EM HOSPEDAGEM (Hotel Porto Minas) --- */}
+        <div className="tier-section tier-hospedagem">
+          <div className="tier-badge badge-hospedagem">Apoio em Hospedagem</div>
+          <div className="tier-grid">
+            <a href="https://www.portominashotel.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgPortoMinas} alt="Hotel Porto Minas" />
+            </a>
+          </div>
+        </div>
+
+        {/* --- PARCEIRAS (Capes, CNPq, Fapemig) --- */}
+        <div className="tier-section tier-parceiras">
+          <div className="tier-badge badge-parceiras">Parceiras</div>
+          <div className="tier-grid">
+            <a href="https://www.gov.br/capes/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgCapes} alt="CAPES" />
+            </a>
+            <a href="https://www.gov.br/cnpq/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgCnpq} alt="CNPq" />
+            </a>
+            <a href="https://fapemig.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgFapemig} alt="FAPEMIG" />
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   );

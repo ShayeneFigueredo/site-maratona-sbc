@@ -7,21 +7,32 @@ import maratonaLogo from "../assets/logomaratona.png";
 import facomLogo from "../assets/facom.png";
 import ufuLogo from "../assets/logoufu.png";
 
+// Importações dinâmicas seguindo a regra: nome-primeiraletrasobrenome.webp
+import carlosF from "../assets/organizadores/nacional/carlos-f.webp";
+import rodolfoA from "../assets/organizadores/nacional/rodolfo-a.webp";
+import pauloC from "../assets/organizadores/nacional/paulo-c.webp";
+import viniciusS from "../assets/organizadores/nacional/vinicius-s.webp";
+import brunoR from "../assets/organizadores/nacional/bruno-r.webp";
+import lucyT from "../assets/organizadores/nacional/lucy-t.webp";
+import andersonA from "../assets/organizadores/nacional/anderson-a.webp";
+import rafaelS from "../assets/organizadores/nacional/rafael-s.webp";
+import emilioW from "../assets/organizadores/nacional/emilio-w.webp";
+
 // Imagem padrão para os membros
 import peopleImg from "../assets/organizadores/people.webp";
 
 export default function Organizadores() {
   const nacional = [
-    { nome: "Carlos Eduardo Ferreira", cargo: "Diretor Geral" },
-    { nome: "Rodolfo Azevedo", cargo: "Diretor de Sistemas" },
-    { nome: "Bruno Ribas", cargo: "Diretor de Sistemas" },
-    { nome: "Paulo Cezar Pereira Costa", cargo: "Diretor de Problemas e Chefe dos Juízes na AL" },
-    { nome: "Vinicius Santos", cargo: "Diretor de Problemas no Brasil" },
-    { nome: "Lucy Mari Tabuti", cargo: "Diretora de Patrocínios" },
-    { nome: "Anderson Viçoso de Araujo", cargo: "Diretor de Operações da Final Brasileira" },
-    { nome: "Emilio Wuerges", cargo: "Diretor de Transmissões" },
-    { nome: "Rafael Crivellari Saliba Schouery", cargo: "Diretor da Escola de Verão" },
-  ];
+  { nome: "Carlos E. Ferreira", cargo: "Direção Geral", foto: carlosF },
+  { nome: "Rodolfo Azevedo", cargo: "Direção Geral", foto: rodolfoA },
+  { nome: "Paulo Cezar Pereira Costa", cargo: "Diretor de Problemas e Chefe dos Juízes na AL", foto: pauloC },
+  { nome: "Vinicius Santos", cargo: "Diretor de Problemas no Brasil", foto: viniciusS },
+  { nome: "Bruno Ribas", cargo: "Diretor de Sistemas", foto: brunoR },
+  { nome: "Lucy Mari Tabuti", cargo: "Diretora de Patrocínios", foto: lucyT },
+  { nome: "Anderson Viçoso de Araujo", cargo: "Diretor de Operações da Final Brasileira", foto: andersonA },
+  { nome: "Rafael Crivellari Saliba Schouery", cargo: "Diretor da Escola de Verão", foto: rafaelS },
+  { nome: "Emilio Wuerges", cargo: "Diretor de Transmissões", foto: emilioW }
+];
 
   const local = Array.from({ length: 10 }, (_, i) => ({
     nome: `Nome ${i + 1}`,
@@ -62,10 +73,13 @@ export default function Organizadores() {
           {nacional.map((pessoa, index) => (
             <div key={index} className="staff-card">
               <div className="avatar-wrapper">
-                <img src={peopleImg} alt={pessoa.nome} />
+                {/* se não carregar a foto, ele tenta mostrar o peopleImg de fallback */}
+                <img src={pessoa.foto || peopleImg} alt={pessoa.nome} onError={(e) => e.target.src = peopleImg} />
               </div>
               <h3>{pessoa.nome}</h3>
               <p>{pessoa.cargo}</p>
+              {/* ssó mostra a instituição se ela existir no array */}
+              {pessoa.inst && <span className="staff-inst">{pessoa.inst}</span>}
             </div>
           ))}
         </div>

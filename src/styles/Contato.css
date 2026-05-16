@@ -74,18 +74,30 @@
     max-width: 80%;
 }
 
+/* --- Grupo que empilha os emails --- */
+.emails-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /
+    width: 100%;
+    align-items: center;
+    z-index: 1;
+}
+
 /* --- Área do E-mail em Destaque --- */
 .email-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    z-index: 1;
     background: rgba(255, 255, 255, 0.03);
-    padding: 25px 50px;
+    padding: 20px 40px; 
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    
+    width: 100%; 
+    max-width: 400px; 
 }
 
 .email-container:hover {
