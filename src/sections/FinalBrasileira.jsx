@@ -16,7 +16,7 @@ export default function FinalBrasileira() {
           Com muita honra, a cidade de Uberlândia recebe a <strong>31ª MARATONA SBC DE PROGRAMAÇÃO</strong>, 
           realizada pela <strong>FACOM</strong> e promovida pela <strong>Sociedade Brasileira de Computação (SBC)</strong>. 
           São mais de 30 anos promovendo o desenvolvimento da comunidade voltada para a computação em todo o território nacional, 
-          com dezenas de times representando todos os estados do Brasil e diversas Instituições de Ensino Superior.
+          com dezenas de times representando todos os estados do Brasil e centenas Instituições de Ensino Superior.
         </p>
       </div>
 
@@ -34,8 +34,8 @@ export default function FinalBrasileira() {
             <p>
               A <strong>Faculdade de Computação (FACOM)</strong> da Universidade Federal de Uberlândia (UFU) 
               é a realizadora desta edição. Reconhecida por sua excelência acadêmica, a faculdade é um 
-              polo de inovação e pesquisa, oferecendo cursos de destaque nas áreas de Sistemas de Informação, 
-              Ciência da Computação e Engenharia de Computação.
+              polo de inovação e pesquisa, oferecendo cursos de destaque nos bacharelados de Sistemas
+              de Informação, Ciência da Computação e Inteligência Artificial.
             </p>
           </div>
         </div>
@@ -51,9 +51,10 @@ export default function FinalBrasileira() {
           <div className="card-content">
             <h3>Sobre a SBC</h3>
             <p>
-              A <strong>Sociedade Brasileira de Computação (SBC)</strong> é a promotora oficial da Maratona de Programação. 
-              Fundada em 1978, é a principal entidade científica e profissional na área de Computação no Brasil, 
-              fomentando o desenvolvimento tecnológico e coordenando eventos nacionais e internacionais.
+              A <strong>Sociedade Brasileira de Computação (SBC)</strong>, fundada em 1978, como promotora oficial
+              da Maratona de Programação, é a principal entidade científica e profissional na área de
+              Computação no Brasil, fomentando o desenvolvimento tecnológico e coordenando eventos
+              nacionais e internacionais.
             </p>
           </div>
         </div>

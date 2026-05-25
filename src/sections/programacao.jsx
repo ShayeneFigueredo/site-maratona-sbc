@@ -4,22 +4,22 @@ import { BsLockFill } from "react-icons/bs";
 export default function Programacao() {
   const dadosProgramacao = [
     {
-      date: "05/11 - Quarta-feira (Chegada)",
+      date: "05/11 - Quinta-feira (Chegada)",
       time: "10:00 - 22:00",
       description: "Recepção das delegações e credenciamento oficial.",
     },
     {
-      date: "06/11 - Quinta-feira (Aquecimento)",
+      date: "06/11 - Sexta-feira (Aquecimento)",
       time: "08:30 - 19:30",
       description: "Sessão de aquecimento e teste dos sistemas de competição.",
     },
     {
-      date: "07/11 - Sexta-feira (Competição)",
+      date: "07/11 - Sábado (Competição)",
       time: "09:00 - 24:00",
       description: "Grande Final da Maratona de Programação 2026.",
     },
     {
-      date: "08/11 - Sábado (Retorno)",
+      date: "08/11 - Domingo (Retorno)",
       time: "Manhã",
       description: "Cerimônia de encerramento e logística de retorno.",
     }

@@ -34,16 +34,16 @@ export default function SobreMaratona() {
           <div className="paragrafo-principal">
             
             <p>
-              Pela primeira vez na história, a Final Brasileira da Maratona SBC de Programação 
+              Pela segunda vez, a Final Brasileira da Maratona SBC de Programação
               chega à cidade de Uberlândia e, com muita honra, recebemos a 31ª MARATONA SBC DE 
               PROGRAMAÇÃO 2026, realizada pela FACOM-UFU e promovida pela Sociedade Brasileira 
               de Computação (SBC).
             </p>
             
             <p>
-              A Maratona SBC de Programação, promovida pela Sociedade Brasileira de Computação (SBC), 
-              é uma competição nacional que reúne estudantes de Computação em uma batalha contra o 
-              tempo para resolver problemas complexos com criatividade, estratégia e trabalho em equipe.
+              A Maratona SBC de Programação é uma competição nacional que reúne estudantes de Computação
+              em uma batalha contra o tempo para resolver problemas complexos com criatividade,
+              estratégia e trabalho em equipe.
             </p>
             <p>
               Várias instituições de ensino superior do Brasil desenvolvem competições locais para escolher 
@@ -54,14 +54,15 @@ export default function SobreMaratona() {
             </p>
             <p>
               Na América Latina já tivemos mais de 100.000 participações de estudantes na regional, dos quais aproximadamente 
-              um terço são brasileiros. Os times são compostos por três estudantes, que tentarão resolver 
+              um terço são brasileiros. Os times são compostos por três estudantes, podendo ter um reserva, que tentarão resolver 
               durante cinco horas o maior número possível dos dez ou mais problemas fornecidos.
             </p>
             <p>
-              Os competidores devem colaborar para descobrir os problemas mais 
-              fáceis, projetar os testes e construir as soluções que sejam aprovadas pelos juízes. Certos 
-              problemas requerem apenas compreensão, outros conhecimentos de técnicas mais sofisticadas, 
-              e alguns podem ser realmente muito difíceis de serem resolvidos.
+              A equipe de competidores se organiza para tentar descobrir as soluções que sejam
+              aprovadas pelos juízes. Normalmente, iniciam pelos problemas mais fáceis, projetam os
+              testes e enviam para a correção. Certos problemas requerem apenas compreensão, outros
+              conhecimentos de técnicas mais sofisticadas, e alguns podem ser realmente muito difíceis
+              de serem resolvidos.
             </p>
           </div>
         </div>
