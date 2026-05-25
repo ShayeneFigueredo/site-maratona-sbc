@@ -34,10 +34,24 @@ export default function Organizadores() {
   { nome: "Emilio Wuerges", cargo: "Diretor de Transmissões", foto: emilioW }
 ];
 
-  const local = Array.from({ length: 10 }, (_, i) => ({
-    nome: `Nome ${i + 1}`,
-    cargo: "Organização Local",
-  }));
+  const local = [
+    { nome: "Luiz Cláudio Theodoro", cargo: "Diretor da Final Brasileira" },
+    { nome: "Rafael Dias Araújo", cargo: "Diretor da Final Brasileira" },
+    { nome: "Ronaldo Castro de Oliveira", cargo: "Diretor da Final Brasileira" },
+    { nome: "Samuel Amorim", cargo: "Desenvolvedor Web / Transmissão" },
+    { nome: "Shayene Figueredo", cargo: "Desenvolvedora Web / Transmissão" },
+    { nome: "Mariana Martins", cargo: "Designer" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+    { nome: "Nome", cargo: "Organização Local" },
+  ];
 
   return (
     <section className="organizadores-page">

@@ -7,12 +7,13 @@ import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
 import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
 import imgStone from "../assets/logos-patrocinador/stone-edit.png";
 import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
+import imgVtex from "../assets/logos-patrocinador/vtex.png";
+import imgGoogle from "../assets/logos-patrocinador/google.png";
 import imgPrefeitura from "../assets/logos-patrocinador/prefeitura.png";
 import imgFutel from "../assets/logos-patrocinador/futel.png";
 import imgPortoMinas from "../assets/logos-patrocinador/portominas.png";
 import imgCapes from "../assets/logos-patrocinador/capes.png";
 import imgCnpq from "../assets/logos-patrocinador/cnpq.png";
-import imgFapemig from "../assets/logos-patrocinador/fapemig.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -52,6 +53,9 @@ export default function Patrocinadores() {
             <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgIncognia} alt="Incognia" />
             </a>
+            <a href="https://vtex.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgVtex} alt="VTEX" />
+            </a>
           </div>
         </div>
 
@@ -71,6 +75,9 @@ export default function Patrocinadores() {
           <div className="tier-grid">
             <a href="https://alphabot.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgAlphabo} alt="Alphabot" />
+            </a>
+            <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgGoogle} alt="Google" />
             </a>
           </div>
         </div>
@@ -118,9 +125,6 @@ export default function Patrocinadores() {
             </a>
             <a href="https://www.gov.br/cnpq/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgCnpq} alt="CNPq" />
-            </a>
-            <a href="https://fapemig.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgFapemig} alt="FAPEMIG" />
             </a>
           </div>
         </div>
