@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
           
           <div className="hero-btns">
-             <button className="btn-saiba-mais">Saiba mais</button>
+             <span className="hero-date-location">05 a 08 de novembro de 2026 - Uberlândia/MG</span>
           </div>
         </div>
 

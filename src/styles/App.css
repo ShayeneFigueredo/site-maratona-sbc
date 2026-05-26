@@ -28,6 +28,7 @@ body {
   color: white;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -1054,6 +1055,16 @@ body {
   transform: scale(1.05);
 }
 
+.hero-date-location {
+  font-family: 'Anta', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff8c00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
 /* Botões Secundários (Azul Escuro/Borda Gradiente estilo o botão de Login/Registro) */
 .btn-pdf-fake,
 .btn-agenda-fake {
@@ -1237,8 +1248,11 @@ body {
     font-size: 3.5rem;
   }
 
-  .btn-saiba-mais {
+  .hero-date-location {
+    text-align: center;
+    display: block;
     margin: 0 auto;
+    font-size: 16px;
   }
 
   .sobre-linha-superior {
@@ -1385,7 +1399,14 @@ body {
   }
 
   /* UI Elements: Global Mobile Buttons */
-  .btn-saiba-mais,
+  .hero-date-location {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 auto 15px auto;
+    font-size: 15px;
+  }
+
   .btn-primary,
   .btn-pdf-fake,
   .btn-agenda-fake {

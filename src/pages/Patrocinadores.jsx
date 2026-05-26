@@ -100,7 +100,7 @@ export default function Patrocinadores() {
         <div className="tier-section tier-logistico">
           <div className="tier-badge badge-logistico">Apoio Logístico</div>
           <div className="tier-grid">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+            <a href="https://www.uberlandia.mg.gov.br/prefeitura/orgaos-municipais/futel/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgFutel} alt="FUTEL" />
             </a>
           </div>

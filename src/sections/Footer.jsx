@@ -25,10 +25,10 @@ export default function Footer() {
             <h3>INFORMAÇÕES</h3>
           </div>
           <ul>
-            <li><a href="#regulamento">Regulamento</a></li>
-            <li><a href="#edicoes">Edições Anteriores</a></li>
-            <li><a href="/organizadores">Equipe Organizadora</a></li>
-            <li><a href="#manual">Manual do Diretor</a></li>
+            <li><a href="https://maratona.sbc.org.br/sobre/regras.html" target="_blank" rel="noopener noreferrer">Regulamento</a></li>
+            <li><a href="https://maratona.sbc.org.br/hist/index.html" target="_blank" rel="noopener noreferrer">Edições Anteriores</a></li>
+            <li><a href="https://maratona.sbc.org.br/sobre/organizacao.html" target="_blank" rel="noopener noreferrer">Organização</a></li>
+            <li><a href="https://maratona.sbc.org.br/manual.pdf" target="_blank" rel="noopener noreferrer">Manual do Diretor</a></li>
           </ul>
         </div>
 
@@ -65,12 +65,12 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>© 2026 MARATONA-SBC DE PROGRAMAÇÃO. TODOS OS DIREITOS RESERVADOS.</p>
         <span className="dev-credit">
-          ESTE SITE FOI DESENVOLVIDO POR 
+          ESTE SITE FOI DESENVOLVIDO POR{" "}
           <a href="https://www.linkedin.com/in/samuelfamorim/" target="_blank" rel="noopener noreferrer" className="dev-link">
-            <strong>   SAMUEL AMORIM</strong>
-          </a> E 
+            <strong>SAMUEL AMORIM</strong>
+          </a>{" "}E{" "}
           <a href="https://www.linkedin.com/in/shayene-figueredo/" target="_blank" rel="noopener noreferrer" className="dev-link">
-            <strong>   SHAYENE FIGUEREDO</strong>
+            <strong>SHAYENE FIGUEREDO</strong>
           </a>
         </span>
       </div>
