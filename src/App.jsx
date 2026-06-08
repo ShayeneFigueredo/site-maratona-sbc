@@ -52,7 +52,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/site-maratona-sbc">
+    <BrowserRouter basename="/">
       <div className="app-container">
         <Navbar />
         <Routes>

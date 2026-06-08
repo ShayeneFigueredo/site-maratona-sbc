@@ -18,6 +18,13 @@ import andersonA from "../assets/organizadores/nacional/anderson-a.webp";
 import rafaelS from "../assets/organizadores/nacional/rafael-s.webp";
 import emilioW from "../assets/organizadores/nacional/emilio-w.webp";
 
+// Fotos da organização local
+// Quem ainda não tem foto usa o peopleImg de fallback
+import rafaelA from "../assets/organizadores/local/rafael-a.GIF";
+import ronaldoO from "../assets/organizadores/local/ronaldo-o.jpeg";
+import samuelA from "../assets/organizadores/local/samuel-a.jpg";
+import shayeneF from "../assets/organizadores/local/shayene-f.jpg";
+
 // Imagem padrão para os membros
 import peopleImg from "../assets/organizadores/people.webp";
 
@@ -36,21 +43,11 @@ export default function Organizadores() {
 
   const local = [
     { nome: "Luiz Cláudio Theodoro", cargo: "Diretor da Final Brasileira" },
-    { nome: "Rafael Dias Araújo", cargo: "Diretor da Final Brasileira" },
-    { nome: "Ronaldo Castro de Oliveira", cargo: "Diretor da Final Brasileira" },
-    { nome: "Samuel Amorim", cargo: "Desenvolvedor Web / Transmissão" },
-    { nome: "Shayene Figueredo", cargo: "Desenvolvedora Web / Transmissão" },
+    { nome: "Rafael Dias Araújo", cargo: "Diretor da Final Brasileira", foto: rafaelA },
+    { nome: "Ronaldo Castro de Oliveira", cargo: "Diretor da Final Brasileira", foto: ronaldoO },
+    { nome: "Samuel Amorim", cargo: "Desenvolvedor Web / Transmissão", foto: samuelA },
+    { nome: "Shayene Figueredo", cargo: "Desenvolvedora Web / Transmissão", foto: shayeneF },
     { nome: "Mariana Martins", cargo: "Designer" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
-    { nome: "Nome", cargo: "Organização Local" },
   ];
 
   return (
@@ -106,10 +103,13 @@ export default function Organizadores() {
           {local.map((pessoa, index) => (
             <div key={index} className="staff-card">
               <div className="avatar-wrapper">
-                <img src={peopleImg} alt={pessoa.nome} />
+                {/* se não carregar a foto, ele tenta mostrar o peopleImg de fallback */}
+                <img src={pessoa.foto || peopleImg} alt={pessoa.nome} onError={(e) => e.target.src = peopleImg} />
               </div>
               <h3>{pessoa.nome}</h3>
               <p>{pessoa.cargo}</p>
+              {/* só mostra a instituição se ela existir no array */}
+              {pessoa.inst && <span className="staff-inst">{pessoa.inst}</span>}
             </div>
           ))}
         </div>
