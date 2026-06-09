@@ -14,6 +14,8 @@ import imgFutel from "../assets/logos-patrocinador/futel.png";
 import imgPortoMinas from "../assets/logos-patrocinador/portominas.png";
 import imgCapes from "../assets/logos-patrocinador/capes.png";
 import imgCnpq from "../assets/logos-patrocinador/cnpq.png";
+import imgBtg from "../assets/logos-patrocinador/btgpactual.png";
+import imgUnder from "../assets/logos-patrocinador/under.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -125,6 +127,26 @@ export default function Patrocinadores() {
             </a>
             <a href="https://www.gov.br/cnpq/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgCnpq} alt="CNPq" />
+            </a>
+          </div>
+        </div>
+
+        {/* --- PATROCINADOR PREMIUM (BTG Pactual) --- */}
+        <div className="tier-section tier-premium">
+          <div className="tier-badge badge-premium">Patrocinador Premium</div>
+          <div className="tier-grid">
+            <a href="https://www.btgpactual.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgBtg} alt="BTG Pactual" />
+            </a>
+          </div>
+        </div>
+
+        {/* --- PATROCINADOR NUVEM (Under) --- */}
+        <div className="tier-section tier-nuvem">
+          <div className="tier-badge badge-nuvem">Patrocinador Nuvem</div>
+          <div className="tier-grid">
+            <a href="https://under.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgUnder} alt="Under" />
             </a>
           </div>
         </div>

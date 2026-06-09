@@ -24,6 +24,7 @@ import rafaelA from "../assets/organizadores/local/rafael-a.GIF";
 import ronaldoO from "../assets/organizadores/local/ronaldo-o.jpeg";
 import samuelA from "../assets/organizadores/local/samuel-a.jpg";
 import shayeneF from "../assets/organizadores/local/shayene-f.jpg";
+import luizC from "../assets/organizadores/local/luiz-t.jpeg";
 
 // Imagem padrão para os membros
 import peopleImg from "../assets/organizadores/people.webp";
@@ -42,7 +43,7 @@ export default function Organizadores() {
 ];
 
   const local = [
-    { nome: "Luiz Cláudio Theodoro", cargo: "Diretor da Final Brasileira" },
+    { nome: "Luiz Cláudio Theodoro", cargo: "Diretor da Final Brasileira", foto: luizC },
     { nome: "Rafael Dias Araújo", cargo: "Diretor da Final Brasileira", foto: rafaelA },
     { nome: "Ronaldo Castro de Oliveira", cargo: "Diretor da Final Brasileira", foto: ronaldoO },
     { nome: "Samuel Amorim", cargo: "Desenvolvedor Web / Transmissão", foto: samuelA },
