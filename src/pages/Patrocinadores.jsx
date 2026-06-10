@@ -48,6 +48,16 @@ export default function Patrocinadores() {
       </div>
 
       <div className="other-tiers-container">
+        {/* --- PREMIUM --- */}
+        <div className="tier-section tier-premium">
+          <div className="tier-badge badge-premium">Premium</div>
+          <div className="tier-grid">
+            <a href="https://www.btgpactual.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgBtg} alt="BTG Pactual" />
+            </a>
+          </div>
+        </div>
+
         {/* --- DIAMANTE --- */}
         <div className="tier-section tier-diamante">
           <div className="tier-badge">Diamante</div>
@@ -84,44 +94,23 @@ export default function Patrocinadores() {
           </div>
         </div>
 
-        {/* ========================================= */}
-        {/* NOVAS SEÇÕES DE APOIO           */}
-        {/* ========================================= */}
+        {/* --- NUVEM --- */}
+        <div className="tier-section tier-nuvem">
+          <div className="tier-badge badge-nuvem">Nuvem</div>
+          <div className="tier-grid">
+            <a href="https://under.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgUnder} alt="Under" />
+            </a>
+          </div>
+        </div>
 
-        {/* --- APOIO INSTITUCIONAL (Prefeitura) --- */}
+        {/* --- APOIO INSTITUCIONAL --- */}
         <div className="tier-section tier-infra">
           <div className="tier-badge badge-infra">Apoio Institucional</div>
           <div className="tier-grid">
             <a href="https://www.uberlandia.mg.gov.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgPrefeitura} alt="Prefeitura de Uberlândia" />
             </a>
-          </div>
-        </div>
-
-        {/* --- APOIO LOGÍSTICO (FUTEL) --- */}
-        <div className="tier-section tier-logistico">
-          <div className="tier-badge badge-logistico">Apoio Logístico</div>
-          <div className="tier-grid">
-            <a href="https://www.uberlandia.mg.gov.br/prefeitura/orgaos-municipais/futel/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgFutel} alt="FUTEL" />
-            </a>
-          </div>
-        </div>
-
-        {/* --- APOIO EM HOSPEDAGEM (Hotel Porto Minas) --- */}
-        <div className="tier-section tier-hospedagem">
-          <div className="tier-badge badge-hospedagem">Apoio em Hospedagem</div>
-          <div className="tier-grid">
-            <a href="https://www.portominashotel.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgPortoMinas} alt="Hotel Porto Minas" />
-            </a>
-          </div>
-        </div>
-
-        {/* --- PARCEIRAS (Capes, CNPq, Fapemig) --- */}
-        <div className="tier-section tier-parceiras">
-          <div className="tier-badge badge-parceiras">Parceiras</div>
-          <div className="tier-grid">
             <a href="https://www.gov.br/capes/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgCapes} alt="CAPES" />
             </a>
@@ -131,22 +120,22 @@ export default function Patrocinadores() {
           </div>
         </div>
 
-        {/* --- PATROCINADOR PREMIUM (BTG Pactual) --- */}
-        <div className="tier-section tier-premium">
-          <div className="tier-badge badge-premium">Patrocinador Premium</div>
+        {/* --- APOIO LOGÍSTICO --- */}
+        <div className="tier-section tier-logistico">
+          <div className="tier-badge badge-logistico">Apoio Logístico</div>
           <div className="tier-grid">
-            <a href="https://www.btgpactual.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgBtg} alt="BTG Pactual" />
+            <a href="https://www.uberlandia.mg.gov.br/prefeitura/orgaos-municipais/futel/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgFutel} alt="FUTEL" />
             </a>
           </div>
         </div>
 
-        {/* --- PATROCINADOR NUVEM (Under) --- */}
-        <div className="tier-section tier-nuvem">
-          <div className="tier-badge badge-nuvem">Patrocinador Nuvem</div>
+        {/* --- APOIO EM HOSPEDAGEM --- */}
+        <div className="tier-section tier-hospedagem">
+          <div className="tier-badge badge-hospedagem">Apoio em Hospedagem</div>
           <div className="tier-grid">
-            <a href="https://under.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgUnder} alt="Under" />
+            <a href="https://www.portominashotel.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgPortoMinas} alt="Hotel Porto Minas" />
             </a>
           </div>
         </div>

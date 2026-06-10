@@ -205,12 +205,6 @@
   box-shadow: 0 0 15px rgba(157, 0, 255, 0.1);
 }
 
-.tier-parceiras .tier-badge {
-  color: #ff007f;
-  border-color: rgba(255, 0, 127, 0.4);
-  box-shadow: 0 0 15px rgba(255, 0, 127, 0.1);
-}
-
 .tier-grid {
   display: flex;
   justify-content: center;
@@ -277,10 +271,6 @@
 .tier-hospedagem .sponsor-card-small:hover::before { 
   background: linear-gradient(135deg, var(--neon-purple) 0%, transparent 100%); padding: 2px;
 }
-.tier-parceiras .sponsor-card-small:hover::before {
-  background: linear-gradient(135deg, #ff007f 0%, transparent 100%); padding: 2px;
-}
-
 .tier-premium .tier-badge {
   color: #d4af37;
   border-color: rgba(212, 175, 55, 0.4);
