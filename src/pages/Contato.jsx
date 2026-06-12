@@ -13,27 +13,10 @@ export default function Contato() {
         {/* Nova div que empilha os cards */}
         <div className="emails-wrapper">
           
-          {/* Card 1 */}
           <div className="email-container">
             <FaEnvelope className="email-icon" />
-            <a href="mailto:luiz.theodoro@ufu.br" className="email-link">
-              luiz.theodoro@ufu.br
-            </a>
-          </div>
-
-          {/* Card 2 */}
-          <div className="email-container">
-            <FaEnvelope className="email-icon" />
-            <a href="mailto:ronaldo.co@ufu.br" className="email-link">
-              ronaldo.co@ufu.br
-            </a>
-          </div>
-
-          {/* Card 3 */}
-          <div className="email-container">
-            <FaEnvelope className="email-icon" />
-            <a href="mailto:rafael.araujo@ufu.br" className="email-link">
-              rafael.araujo@ufu.br
+            <a href="mailto:maratonasbc@facom.ufu.br" className="email-link">
+              maratonasbc@facom.ufu.br
             </a>
           </div>
 
