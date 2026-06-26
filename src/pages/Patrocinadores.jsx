@@ -16,6 +16,7 @@ import imgCapes from "../assets/logos-patrocinador/capes.png";
 import imgCnpq from "../assets/logos-patrocinador/cnpq.png";
 import imgBtg from "../assets/logos-patrocinador/btgpactual.png";
 import imgUnder from "../assets/logos-patrocinador/under.png";
+import imgUfu from "../assets/logo-ufu-transparente-branco.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -116,6 +117,9 @@ export default function Patrocinadores() {
             </a>
             <a href="https://www.gov.br/cnpq/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgCnpq} alt="CNPq" />
+            </a>
+            <a href="https://ufu.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgUfu} alt="UFU - Universidade Federal de Uberlândia" />
             </a>
           </div>
         </div>
