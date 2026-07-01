@@ -5,7 +5,9 @@ import "../styles/Patrocinadores.css";
 import imgHuawei from "../assets/logos-patrocinador/huawei-edit.png";
 import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
 import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
-import imgStone from "../assets/logos-patrocinador/stone-edit.png";
+import imgStone from "../assets/logos-patrocinador/StoneLogotipoVerde.png";
+import imgPax from "../assets/logos-patrocinador/pax.png";
+import imgMandelics from "../assets/logos-patrocinador/mandelics.png";
 import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
 import imgVtex from "../assets/logos-patrocinador/vtex.png";
 import imgGoogle from "../assets/logos-patrocinador/google.png";
@@ -32,11 +34,10 @@ export default function Patrocinadores() {
       
       <h1 className="page-title">Nossos Patrocinadores</h1>
 
-      {/* --- PATROCINADOR MUNDIAL --- */}
+      {/* --- PATROCINADORES GLOBAIS E MULTIRREGIONAIS --- */}
       <div className="mundial-container">
         <div className="mundial-header">
-          <h3>Patrocinador Mundial</h3>
-          <span className="destaque-global">Destaque global</span>
+          <h3>Patrocinadores Globais e Multirregionais</h3>
         </div>
         <div className="mundial-logos">
           <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">
@@ -69,6 +70,9 @@ export default function Patrocinadores() {
             <a href="https://vtex.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgVtex} alt="VTEX" />
             </a>
+            <a href="https://www.pax.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgPax} alt="PAX" />
+            </a>
           </div>
         </div>
 
@@ -91,6 +95,9 @@ export default function Patrocinadores() {
             </a>
             <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgGoogle} alt="Google" />
+            </a>
+            <a href="https://mendelics.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgMandelics} alt="Mandelics" />
             </a>
           </div>
         </div>
