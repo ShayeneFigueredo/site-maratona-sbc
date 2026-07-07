@@ -18,6 +18,7 @@ import imgCapes from "../assets/logos-patrocinador/capes.png";
 import imgCnpq from "../assets/logos-patrocinador/cnpq.png";
 import imgBtg from "../assets/logos-patrocinador/btgpactual.png";
 import imgUnder from "../assets/logos-patrocinador/under.png";
+import imgRivio from "../assets/logos-patrocinador/rivio.png";
 import imgUfu from "../assets/logo-ufu-transparente-branco.png";
 
 // Importações Decorativas
@@ -70,8 +71,11 @@ export default function Patrocinadores() {
             <a href="https://vtex.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgVtex} alt="VTEX" />
             </a>
-            <a href="https://www.pax.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+            <a href="https://pax.ai/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgPax} alt="PAX" />
+            </a>
+            <a href="https://www.rivio.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgRivio} alt="Rivio" />
             </a>
           </div>
         </div>

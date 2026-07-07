@@ -12,6 +12,7 @@ import imgVtex from "../assets/logos-patrocinador/vtex.png";
 import imgPax from "../assets/logos-patrocinador/pax.png";
 import imgGoogle from "../assets/logos-patrocinador/google.png";
 import imgMandelics from "../assets/logos-patrocinador/mandelics.png";
+import imgRivio from "../assets/logos-patrocinador/rivio.png";
 
 
 export default function LogosSection() {
@@ -47,8 +48,11 @@ export default function LogosSection() {
           <a href="https://vtex.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgVtex} alt="VTEX" />
           </a>
-          <a href="https://www.pax.com.br/" target="_blank" rel="noopener noreferrer">
+          <a href="https://pax.ai/" target="_blank" rel="noopener noreferrer">
             <img src={imgPax} alt="PAX" />
+          </a>
+          <a href="https://www.rivio.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src={imgRivio} alt="Rivio" />
           </a>
           <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgGoogle} alt="Google" />
@@ -82,8 +86,11 @@ export default function LogosSection() {
           <a href="https://vtex.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgVtex} alt="VTEX" />
           </a>
-          <a href="https://www.pax.com.br/" target="_blank" rel="noopener noreferrer">
+          <a href="https://pax.ai/" target="_blank" rel="noopener noreferrer">
             <img src={imgPax} alt="PAX" />
+          </a>
+          <a href="https://www.rivio.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src={imgRivio} alt="Rivio" />
           </a>
           <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgGoogle} alt="Google" />
