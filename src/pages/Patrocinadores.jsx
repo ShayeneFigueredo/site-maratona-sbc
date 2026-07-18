@@ -4,6 +4,7 @@ import "../styles/Patrocinadores.css";
 // Importações das imagens (Patrocinadores)
 import imgHuawei from "../assets/logos-patrocinador/huawei-edit.png";
 import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
+import imgNubank from "../assets/logos-patrocinador/03_nulogo_white.png";
 import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
 import imgStone from "../assets/logos-patrocinador/StoneLogotipoVerde.png";
 import imgPax from "../assets/logos-patrocinador/pax.png";
@@ -65,6 +66,9 @@ export default function Patrocinadores() {
         <div className="tier-section tier-diamante">
           <div className="tier-badge">Diamante</div>
           <div className="tier-grid">
+            <a href="https://nubank.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgNubank} alt="Nubank" />
+            </a>
             <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgIncognia} alt="Incognia" />
             </a>

@@ -1,8 +1,9 @@
 import React from "react";
-import "../styles/App.css"; 
+import "../styles/App.css";
 
 import imgHuawei from "../assets/logos-patrocinador/huawei-edit.png";
 import imgJetbrains from "../assets/logos-patrocinador/jetbrains-edit.png";
+import imgNubank from "../assets/logos-patrocinador/03_nulogo_white.png";
 import imgIncognia from "../assets/logos-patrocinador/incognia-edit.png";
 import imgStone from "../assets/logos-patrocinador/StoneLogotipoVerde.png";
 import imgAlphabo from "../assets/logos-patrocinador/alphabot-edit.png";
@@ -22,13 +23,16 @@ export default function LogosSection() {
 
       <div className="logos-carousel">
         <div className="logos-track">
-          
-          
+
+
           <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">
             <img src={imgHuawei} alt="Huawei" />
           </a>
           <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgJetbrains} alt="Jetbrains" />
+          </a>
+          <a href="https://nubank.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src={imgNubank} alt="Nubank" />
           </a>
           <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgIncognia} alt="Incognia" />
@@ -67,6 +71,9 @@ export default function LogosSection() {
           </a>
           <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgJetbrains} alt="Jetbrains" />
+          </a>
+          <a href="https://nubank.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src={imgNubank} alt="Nubank" />
           </a>
           <a href="https://www.incognia.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgIncognia} alt="Incognia" />
