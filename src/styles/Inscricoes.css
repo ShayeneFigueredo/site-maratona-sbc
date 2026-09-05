@@ -1,0 +1,957 @@
+/* ==============================
+   Inscrições Page
+   ============================== */
+
+/* --- Hero --- */
+.inscricoes-page {
+  min-height: 100vh;
+  color: var(--text-main);
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Elementos Decorativos --- */
+.insc-decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+@keyframes insc-flutuar {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Linha laranja — canto superior direito */
+.insc-line-orange {
+  top: 0;
+  right: calc(50% - 50vw);
+  width: 520px;
+  opacity: 0.7;
+}
+
+/* Linha amarela — virada de lado, lado esquerdo */
+.insc-line-yellow {
+  top: 38%;
+  left: calc(50% - 50vw);
+  width: 480px;
+  opacity: 0.55;
+  transform: rotate(90deg) translateX(-40%);
+  transform-origin: left center;
+}
+
+/* Balão laranja — flutua à direita, mais ao centro */
+.insc-balao-laranja {
+  top: 20%;
+  right: 3%;
+  width: 90px;
+  animation: insc-flutuar 6s ease-in-out infinite;
+}
+
+/* Balão verde — flutua à esquerda, mais ao centro */
+.insc-balao-verde {
+  top: 52%;
+  left: 2%;
+  width: 80px;
+  animation: insc-flutuar 7s ease-in-out infinite reverse;
+}
+
+/* Grupo de balões coloridos — lado esquerdo, mais ao centro */
+.insc-grupo-baloes {
+  top: 70%;
+  left: 1%;
+  width: 150px;
+  animation: insc-flutuar 8s ease-in-out infinite;
+}
+
+/* Balão amarelo — lado direito, mais ao centro */
+.insc-balao-amarelo {
+  top: 63%;
+  right: 2%;
+  width: 100px;
+  animation: insc-flutuar 7s ease-in-out infinite 1s;
+}
+
+/* Sabiá — mais ao centro, logo abaixo da navbar */
+.insc-sabia {
+  top: 3%;
+  left: 2%;
+  width: 240px;
+  z-index: 0;
+  opacity: 0.9;
+  animation: insc-flutuar 6s ease-in-out infinite 0.5s;
+}
+
+
+.inscricoes-hero {
+  padding: 180px 5% 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.inscricoes-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 229, 255, 0.12) 0%, rgba(41, 98, 255, 0.08) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.inscricoes-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.inscricoes-hero-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+}
+
+.inscricoes-main-title {
+  font-family: 'Anta', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 0 20px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.inscricoes-hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.inscricoes-hero-subtitle strong {
+  color: var(--text-main);
+}
+
+.btn-inscricao-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #0b0e27;
+  background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-blue) 100%);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.35), 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-inscricao-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 50px rgba(0, 229, 255, 0.55), 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn-ext-icon {
+  font-size: 0.8rem;
+}
+
+/* --- Conteúdo Geral --- */
+.inscricoes-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.inscricoes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-heading {
+  font-family: 'Anta', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-subheading {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: -15px 0 0;
+  line-height: 1.6;
+}
+
+/* --- Categorias --- */
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.categoria-card {
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.categoria-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.categoria-card.theme-cyan::before {
+  background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-blue) 100%);
+}
+
+.categoria-card.theme-purple::before {
+  background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-blue) 100%);
+}
+
+.categoria-card.theme-orange::before {
+  background: linear-gradient(135deg, var(--neon-orange) 0%, var(--neon-purple) 100%);
+}
+
+.categoria-card.theme-cyan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 229, 255, 0.2);
+}
+
+.categoria-card.theme-purple:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(157, 0, 255, 0.2);
+}
+
+.categoria-card.theme-orange:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+}
+
+.categoria-icon {
+  font-size: 2rem;
+}
+
+.categoria-card.theme-cyan .categoria-icon { color: var(--neon-cyan); }
+.categoria-card.theme-purple .categoria-icon { color: var(--neon-purple); }
+.categoria-card.theme-orange .categoria-icon { color: var(--neon-orange); }
+
+.categoria-titulo {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.categoria-valor-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: auto;
+}
+
+.categoria-valor {
+  font-family: 'Anta', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.categoria-por-pessoa {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* --- O que está incluído --- */
+.incluido-card {
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  padding: 40px 50px;
+  overflow: hidden;
+}
+
+.incluido-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-blue) 33%, var(--neon-purple) 66%, var(--neon-orange) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.incluido-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.incluido-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.incluido-lista li strong {
+  color: var(--text-main);
+}
+
+.check-icon {
+  color: var(--neon-cyan);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.aviso-hospedagem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 106, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.25);
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.aviso-hospedagem strong {
+  color: var(--neon-orange);
+}
+
+.aviso-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* --- Como realizar --- */
+.como-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.como-card {
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.como-card:hover {
+  transform: translateY(-4px);
+}
+
+.como-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 25px;
+}
+
+.como-card-header.cyan-header {
+  background: linear-gradient(to right, rgba(0, 229, 255, 0.15), transparent);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+.como-card-header.purple-header {
+  background: linear-gradient(to right, rgba(157, 0, 255, 0.15), transparent);
+  border-bottom: 1px solid rgba(157, 0, 255, 0.15);
+}
+
+.como-card-icon {
+  font-size: 1.3rem;
+}
+
+.cyan-header .como-card-icon { color: var(--neon-cyan); }
+.purple-header .como-card-icon { color: var(--neon-purple); }
+
+.como-card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-main);
+}
+
+.como-card-body {
+  padding: 25px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.como-card-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.como-card-body p strong {
+  color: var(--text-main);
+}
+
+.btn-link-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+  color: #0b0e27;
+  background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-blue) 100%);
+}
+
+.btn-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.3);
+}
+
+.btn-link-card.purple {
+  background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-blue) 100%);
+  color: white;
+}
+
+.btn-link-card.purple:hover {
+  box-shadow: 0 8px 25px rgba(157, 0, 255, 0.3);
+}
+
+/* --- Passo a Passo --- */
+.passos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.passo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 0 0 0;
+  position: relative;
+}
+
+.passo-num {
+  font-family: 'Anta', sans-serif;
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.passo-item:hover .passo-num {
+  background: rgba(0, 229, 255, 0.18);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.25);
+}
+
+.passo-linha-container {
+  position: absolute;
+  left: 23px;
+  top: 48px;
+  width: 2px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.passo-connector {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 229, 255, 0.4), transparent);
+}
+
+.passo-texto {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: 12px 0 28px;
+  flex: 1;
+}
+
+.passo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: opacity 0.2s ease;
+  word-break: break-all;
+}
+
+.passo-link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.passo-ext {
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+/* --- Dúvidas --- */
+.duvidas-card {
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.duvidas-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--neon-orange) 0%, var(--neon-purple) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.duvidas-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+}
+
+.duvidas-icon {
+  font-size: 2rem;
+  color: var(--neon-orange);
+}
+
+.duvidas-header h2 {
+  font-family: 'Anta', sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.duvidas-texto {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0;
+}
+
+.duvidas-texto strong {
+  color: var(--text-main);
+}
+
+.duvidas-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.duvidas-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 35px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  max-width: 480px;
+  width: 100%;
+  justify-content: center;
+}
+
+.duvidas-email-link:hover {
+  border-color: var(--neon-orange);
+  background: rgba(255, 106, 0, 0.06);
+  color: var(--neon-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.15);
+}
+
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* --- Tablet (até 1024px) --- */
+@media (max-width: 1024px) {
+  .inscricoes-hero {
+    padding: 160px 6% 70px;
+  }
+
+  .inscricoes-content {
+    gap: 60px;
+    padding: 0 6%;
+  }
+
+  .categorias-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .categoria-card {
+    padding: 24px 18px;
+  }
+
+  .categoria-valor {
+    font-size: 1.5rem;
+  }
+
+  .incluido-card {
+    padding: 35px 40px;
+  }
+
+  .como-grid {
+    gap: 16px;
+  }
+
+  .duvidas-card {
+    padding: 35px 40px;
+  }
+
+  /* Decorativos — reduz opacidade no tablet */
+  .insc-balao-laranja,
+  .insc-balao-verde,
+  .insc-grupo-baloes,
+  .insc-balao-amarelo { opacity: 0.5; }
+  .insc-sabia { opacity: 0.6; width: 180px; }
+  .insc-line-orange { width: 380px; }
+  .insc-line-yellow { width: 340px; }
+}
+
+/* --- Mobile grande (até 768px) --- */
+@media (max-width: 768px) {
+  /* Hero */
+  .inscricoes-hero {
+    padding: 130px 5% 50px;
+  }
+
+  .inscricoes-hero-logo {
+    max-width: 220px;
+  }
+
+  .inscricoes-main-title {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+
+  .inscricoes-hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .btn-inscricao-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 24px;
+    font-size: 0.95rem;
+  }
+
+  /* Conteúdo */
+  .inscricoes-content {
+    gap: 50px;
+    padding: 0 5%;
+  }
+
+  .inscricoes-section {
+    gap: 20px;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+
+  /* Categorias — empilha em coluna única, centralizado */
+  .categorias-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .categoria-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 20px 22px;
+    gap: 16px;
+  }
+
+  .categoria-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .categoria-titulo {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  .categoria-valor-wrapper {
+    margin-top: 0;
+    align-items: flex-end;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .categoria-valor {
+    font-size: 1.4rem;
+  }
+
+  .categoria-por-pessoa {
+    font-size: 0.65rem;
+    text-align: right;
+  }
+
+  /* O que está incluído */
+  .incluido-card {
+    padding: 28px 22px;
+  }
+
+  .incluido-lista li {
+    font-size: 0.9rem;
+    gap: 12px;
+  }
+
+  .aviso-hospedagem {
+    font-size: 0.85rem;
+    padding: 12px 16px;
+  }
+
+  /* Como realizar */
+  .como-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .como-card-header {
+    padding: 16px 20px;
+  }
+
+  .como-card-body {
+    padding: 20px 20px 24px;
+  }
+
+  .como-card-body p {
+    font-size: 0.88rem;
+  }
+
+  .btn-link-card {
+    align-self: stretch;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  /* Passo a passo */
+  .passo-item {
+    gap: 14px;
+  }
+
+  .passo-num {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+
+  .passo-linha-container {
+    left: 19px;
+    top: 40px;
+  }
+
+  .passo-texto {
+    font-size: 0.88rem;
+    padding: 10px 0 24px;
+  }
+
+  .passo-link {
+    display: block;
+    margin-top: 6px;
+    word-break: break-all;
+    font-size: 0.8rem;
+  }
+
+  /* Dúvidas */
+  .duvidas-card {
+    padding: 28px 22px;
+  }
+
+  .duvidas-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .duvidas-icon {
+    font-size: 1.6rem;
+  }
+
+  .duvidas-texto {
+    font-size: 0.88rem;
+  }
+
+  .duvidas-email-link {
+    font-size: 0.8rem;
+    padding: 13px 16px;
+    gap: 10px;
+    word-break: break-all;
+    justify-content: flex-start;
+  }
+
+  /* Decorativos — oculta no mobile */
+  .insc-sabia,
+  .insc-balao-laranja,
+  .insc-balao-verde,
+  .insc-grupo-baloes,
+  .insc-balao-amarelo { display: none !important; }
+  .insc-line-orange { width: 280px; opacity: 0.35; }
+  .insc-line-yellow { width: 260px; opacity: 0.3; }
+}
+
+/* --- Mobile pequeno (até 480px) --- */
+@media (max-width: 480px) {
+  .inscricoes-hero {
+    padding: 120px 4% 40px;
+  }
+
+  .inscricoes-hero-logo {
+    max-width: 180px;
+  }
+
+  .inscricoes-main-title {
+    font-size: 1.9rem;
+  }
+
+  .inscricoes-content {
+    padding: 0 4%;
+    gap: 40px;
+  }
+
+  /* Categorias empilhadas verticalmente (layout simples) */
+  .categorias-grid {
+    max-width: 100%;
+  }
+
+  .categoria-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px 18px;
+  }
+
+  .categoria-titulo {
+    text-align: center;
+  }
+
+  .categoria-valor-wrapper {
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .categoria-por-pessoa {
+    text-align: center;
+  }
+
+  .incluido-card,
+  .duvidas-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .section-heading {
+    font-size: 1.15rem;
+  }
+
+  .duvidas-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .duvidas-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .duvidas-email-link {
+    font-size: 0.75rem;
+    padding: 12px 14px;
+  }
+
+  .btn-inscricao-primary {
+    font-size: 0.88rem;
+    padding: 13px 20px;
+  }
+}

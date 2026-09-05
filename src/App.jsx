@@ -12,6 +12,7 @@ import Patrocinadores from "./pages/Patrocinadores";
 import Organizadores from "./pages/Organizadores";
 import Contato from "./pages/Contato";
 import Locais from "./pages/Locais";
+import Inscricoes from "./pages/Inscricoes";
 
 import "./styles/App.css"; 
 
@@ -61,6 +62,7 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/organizadores" element={<Organizadores />} />
           <Route path="/locais" element={<Locais />} />
+          <Route path="/inscricoes" element={<Inscricoes />} />
         </Routes>
         <Fotter />
       </div>
