@@ -220,6 +220,23 @@
   overflow: hidden;
 }
 
+.categoria-vagas-badge {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  color: var(--neon-cyan);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+  z-index: 1;
+}
+
 .categoria-card::before {
   content: "";
   position: absolute;

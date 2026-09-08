@@ -16,6 +16,7 @@ export default function Inscricoes() {
       id: 1,
       icon: <FaUsers />,
       titulo: "Equipes Café com Leite (CCL)",
+      vagasLimitadas: true,
       valor: "R$ 750,00",
       valorPorPessoa: "por pessoa",
       theme: "cyan",
@@ -31,7 +32,7 @@ export default function Inscricoes() {
     {
       id: 3,
       icon: <FaUserTie />,
-      titulo: "Coach de equipes CCL",
+      titulo: "Coach de equipes principais que desejam participar como CCL",
       valor: "R$ 200,00",
       valorPorPessoa: "por pessoa",
       theme: "orange",
@@ -57,7 +58,7 @@ export default function Inscricoes() {
     },
     {
       num: "05",
-      texto: "Após a conclusão, acompanhe a situação da inscrição pelo próprio sistema.",
+      texto: "Após a conclusão, aguarde o contato da equipe organizador para confirmar a inscrição e fazer o pagamento.",
     },
   ];
 
@@ -91,7 +92,7 @@ export default function Inscricoes() {
           </p>
           <a
             id="btn-inscricao-ecos"
-            href="https://centraldesistemas.sbc.org.br/ecos/maratonasbc2026"
+            href="https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2026/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-inscricao-primary"
@@ -112,6 +113,9 @@ export default function Inscricoes() {
           <div className="categorias-grid">
             {categorias.map((cat) => (
               <div key={cat.id} className={`categoria-card theme-${cat.theme}`}>
+                {cat.vagasLimitadas && (
+                  <span className="categoria-vagas-badge">Vagas limitadas</span>
+                )}
                 <div className="categoria-icon">{cat.icon}</div>
                 <p className="categoria-titulo">{cat.titulo}</p>
                 <div className="categoria-valor-wrapper">
@@ -161,41 +165,26 @@ export default function Inscricoes() {
                   <strong>não precisam</strong> ser inscritas no sistema ECOS.
                 </p>
                 <p>
-                  O coach da equipe deverá preencher o formulário disponibilizado pela
-                  organização para a coleta dos dados da equipe e de seus integrantes:
-                </p>
-                <a
-                  id="btn-formulario-coach"
-                  href="https://forms.cloud.microsoft/r/uhnQib7Bds"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-link-card"
-                >
-                  Abrir Formulário <FaExternalLinkAlt />
-                </a>
-                <p>
-                  Após o preenchimento do formulário, o coach deverá seguir as{" "}
-                  <strong>orientações da organização</strong> para a efetivação das
-                  inscrições e demais procedimentos necessários.
+                  Os(as) coaches receberão orientações da organização para preenchimento de um formulário com dados das equipes finalistas.
                 </p>
               </div>
             </div>
 
-            {/* Card: Co-coaches e Convidados */}
+            {/* Card: CCL, Co-coaches e Convidados */}
             <div className="como-card">
               <div className="como-card-header purple-header">
                 <FaUserFriends className="como-card-icon" />
-                <h3>Co-coaches e Convidados</h3>
+                <h3>CCL, Co-coaches e Convidados</h3>
               </div>
               <div className="como-card-body">
                 <p>
-                  Os <strong>co-coaches e convidados</strong> deverão realizar{" "}
+                  Os participantes <strong>CCL, co-coaches e convidados</strong> deverão realizar{" "}
                   <strong>sua própria inscrição</strong>, acessando o sistema oficial e
                   selecionando a categoria correspondente.
                 </p>
                 <a
                   id="btn-inscricao-cocoach"
-                  href="https://centraldesistemas.sbc.org.br/ecos/maratonasbc2026"
+                  href="https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2026/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-link-card purple"
@@ -227,12 +216,12 @@ export default function Inscricoes() {
                     <>
                       {" "}
                       <a
-                        href="https://centraldesistemas.sbc.org.br/ecos/maratonasbc2026"
+                        href="https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2026/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="passo-link"
                       >
-                        centraldesistemas.sbc.org.br/ecos/maratonasbc2026
+                        centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2026/
                         <FaExternalLinkAlt className="passo-ext" />
                       </a>
                     </>
