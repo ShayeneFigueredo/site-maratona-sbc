@@ -245,9 +245,6 @@ export default function Inscricoes() {
               <strong>31ª Maratona SBC de Programação – Final Brasileira</strong>:
             </p>
             <div className="duvidas-emails">
-              <a href="mailto:maratonadeprogramacaosbc@gmail.com" className="duvidas-email-link" id="email-gmail">
-                <FaEnvelope /> maratonadeprogramacaosbc@gmail.com
-              </a>
               <a href="mailto:maratonasbc@facom.ufu.br" className="duvidas-email-link" id="email-ufu">
                 <FaEnvelope /> maratonasbc@facom.ufu.br
               </a>
