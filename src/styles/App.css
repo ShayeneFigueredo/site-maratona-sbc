@@ -1228,3 +1228,49 @@ body {
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
+
+/* ── ISOLAMENTO GLOBAL DE IMPRESSÃO ── */
+@media print {
+  html,
+  body {
+    background: #0b0e27 !important;
+    background-color: #0b0e27 !important;
+    background-image: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header,
+  nav,
+  .navbar,
+  .mobile-sidebar,
+  .mobile-menu-icon,
+  .hero,
+  .hero-container,
+  .hero-section,
+  .logos-section,
+  .countdown-section-clean,
+  .stats-container,
+  #sobre,
+  .sobre-section,
+  #final2026,
+  .final-section,
+  #locais,
+  .locais-container,
+  #patrocinadores,
+  .patrocinadores-section,
+  #contato,
+  .contato-container,
+  .organizadores-container,
+  .inscricoes-page,
+  footer,
+  .footer,
+  .footer-container,
+  .decor-item,
+  .insc-decor {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

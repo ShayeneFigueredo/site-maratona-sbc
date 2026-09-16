@@ -8,6 +8,12 @@ import {
 } from "react-icons/fa";
 import "../styles/Programacao.css";
 
+// Logos para o cabeçalho oficial do PDF/Impressão
+import logoMaratona from "../assets/logomaratona.png";
+import imgFacom from "../assets/facom.png";
+import imgSbc from "../assets/sbc.webp";
+import imgUfu from "../assets/logo-ufu-transparente-branco.png";
+
 export default function Programacao() {
   const [toastMessage, setToastMessage] = useState("");
 
@@ -374,6 +380,7 @@ export default function Programacao() {
 
   return (
     <section className="schedule-section" id="programacao">
+      {/* ── CABEÇALHO PADRÃO (VISÍVEL NA TELA) ── */}
       <div className="schedule-header">
         <div className="schedule-badge-top">
           <FaCalendarAlt /> Cronograma do Evento
@@ -390,7 +397,7 @@ export default function Programacao() {
         </p>
       </div>
 
-      {/* Grid 2x2: Quinta e Sexta lado a lado; Sábado e Domingo abaixo */}
+      {/* Grid 2x2: Quinta e Sexta lado a lado; Sábado e Domingo abaixo (VISÍVEL NA TELA) */}
       <div className="schedule-grid-2x2">
         {scheduleDays.map((day) => (
           <div key={day.id} className={`schedule-day-column ${day.themeClass}`}>
@@ -438,7 +445,7 @@ export default function Programacao() {
         ))}
       </div>
 
-      {/* Botões de Ação na base */}
+      {/* Botões de Ação na base (ocultos na impressão) */}
       <div className="schedule-action-btns">
         <button className="btn-schedule-action btn-schedule-calendar" onClick={handleDownloadICS}>
           <FaDownload /> Baixar Calendário (.ics)
@@ -446,6 +453,194 @@ export default function Programacao() {
         <button className="btn-schedule-action btn-schedule-pdf" onClick={handlePrint}>
           <FaPrint /> Imprimir / Salvar PDF
         </button>
+      </div>
+
+      {/* ── VISUALIZAÇÃO EXCLUSIVA DE TABELA PARA IMPRESSÃO / PDF (3 PÁGINAS) ── */}
+      <div className="schedule-print-view">
+        
+        {/* ══════════════════════════════════════════════════════
+            PÁGINA 1: CAPA OFICIAL DO EVENTO COM LOGO GRANDE
+            ══════════════════════════════════════════════════════ */}
+        <div className="print-page print-cover-page">
+          <div className="print-cover-content">
+            <div className="print-cover-badge">FINAL BRASILEIRA 2026</div>
+            
+            <div className="print-cover-logo-box">
+              <img src={logoMaratona} alt="31ª Maratona SBC de Programação" className="print-cover-logo-img" />
+            </div>
+
+            <h1 className="print-cover-title">31ª MARATONA SBC DE PROGRAMAÇÃO</h1>
+            <h2 className="print-cover-subtitle">Programação Oficial & Cronograma Completo</h2>
+            
+            <div className="print-cover-dates-capsule">
+              <span className="print-cover-date">05 a 08 de Novembro de 2026</span>
+              <span className="print-cover-dot">•</span>
+              <span className="print-cover-location">Uberlândia - Minas Gerais</span>
+            </div>
+
+            <div className="print-cover-gradient-line"></div>
+
+            <div className="print-cover-orgs-block">
+              <div className="print-cover-org-col">
+                <span className="cover-org-role">REALIZAÇÃO</span>
+                <div className="cover-org-images">
+                  <img src={imgFacom} alt="FACOM UFU" className="cover-org-logo" />
+                  <img src={imgUfu} alt="UFU" className="cover-org-logo" />
+                </div>
+                <span className="cover-org-name">Faculdade de Computação / UFU</span>
+              </div>
+
+              <div className="print-cover-org-col">
+                <span className="cover-org-role">PROMOÇÃO</span>
+                <div className="cover-org-images">
+                  <img src={imgSbc} alt="SBC" className="cover-org-logo" />
+                </div>
+                <span className="cover-org-name">Sociedade Brasileira de Computação</span>
+              </div>
+            </div>
+
+            <div className="print-cover-site-box">
+              <span>Acesse as informações completas e mapas no site oficial:</span>
+              <strong>maratona.sbc.org.br</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* ══════════════════════════════════════════════════════
+            PÁGINA 2: PROGRAMAÇÃO - QUINTA (05/11) E SEXTA (06/11)
+            ══════════════════════════════════════════════════════ */}
+        <div className="print-page print-schedule-page">
+          <div className="print-page-mini-header">
+            <div className="mini-header-brand">
+              <img src={logoMaratona} alt="Maratona SBC" className="mini-header-logo" />
+              <div>
+                <span className="mini-header-title">31ª Maratona SBC de Programação</span>
+                <span className="mini-header-subtitle">Programação Oficial • Quinta-feira (05/11) e Sexta-feira (06/11)</span>
+              </div>
+            </div>
+            <span className="mini-header-page-num">Página 2</span>
+          </div>
+          
+          <div className="print-gradient-divider"></div>
+
+          <div className="print-tables-group">
+            {scheduleDays.filter((d) => d.id === "quinta" || d.id === "sexta").map((day) => (
+              <div key={`table-${day.id}`} className={`print-day-section print-${day.themeClass}`}>
+                <div className="print-day-header-bar">
+                  <span className="print-day-date">{day.dayNumber}</span>
+                  <span className="print-day-title">{day.dayOfWeek}</span>
+                  <span className="print-day-desc">— {day.subtitle}</span>
+                </div>
+
+                <table className="print-events-table">
+                  <thead>
+                    <tr>
+                      <th className="th-time">Horário</th>
+                      <th className="th-activity">Atividade / Evento</th>
+                      <th className="th-category">Categoria</th>
+                      <th className="th-location">Local</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {day.events.map((ev, idx) => (
+                      <tr key={idx} className={ev.highlight ? "row-highlight" : ""}>
+                        <td className="td-time">
+                          <span className="time-text">{ev.time}</span>
+                        </td>
+                        <td className="td-activity">
+                          <span className="activity-title">{ev.title}</span>
+                        </td>
+                        <td className="td-category">
+                          <span className={`print-cat-badge cat-${ev.categoryType || 'logistica'}`}>
+                            {ev.category}
+                          </span>
+                        </td>
+                        <td className="td-location">
+                          <span className="location-text">{ev.location}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ══════════════════════════════════════════════════════
+            PÁGINA 3: PROGRAMAÇÃO - SÁBADO (07/11) E DOMINGO (08/11)
+            ══════════════════════════════════════════════════════ */}
+        <div className="print-page print-schedule-page print-last-page">
+          <div className="print-page-mini-header">
+            <div className="mini-header-brand">
+              <img src={logoMaratona} alt="Maratona SBC" className="mini-header-logo" />
+              <div>
+                <span className="mini-header-title">31ª Maratona SBC de Programação</span>
+                <span className="mini-header-subtitle">Programação Oficial • Sábado (07/11) e Domingo (08/11)</span>
+              </div>
+            </div>
+            <span className="mini-header-page-num">Página 3</span>
+          </div>
+          
+          <div className="print-gradient-divider"></div>
+
+          <div className="print-tables-group">
+            {scheduleDays.filter((d) => d.id === "sabado" || d.id === "domingo").map((day) => (
+              <div key={`table-${day.id}`} className={`print-day-section print-${day.themeClass}`}>
+                <div className="print-day-header-bar">
+                  <span className="print-day-date">{day.dayNumber}</span>
+                  <span className="print-day-title">{day.dayOfWeek}</span>
+                  <span className="print-day-desc">— {day.subtitle}</span>
+                </div>
+
+                <table className="print-events-table">
+                  <thead>
+                    <tr>
+                      <th className="th-time">Horário</th>
+                      <th className="th-activity">Atividade / Evento</th>
+                      <th className="th-category">Categoria</th>
+                      <th className="th-location">Local</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {day.events.map((ev, idx) => (
+                      <tr key={idx} className={ev.highlight ? "row-highlight" : ""}>
+                        <td className="td-time">
+                          <span className="time-text">{ev.time}</span>
+                        </td>
+                        <td className="td-activity">
+                          <span className="activity-title">{ev.title}</span>
+                        </td>
+                        <td className="td-category">
+                          <span className={`print-cat-badge cat-${ev.categoryType || 'logistica'}`}>
+                            {ev.category}
+                          </span>
+                        </td>
+                        <td className="td-location">
+                          <span className="location-text">{ev.location}</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
+          </div>
+
+          {/* Rodapé Oficial do PDF na Página 3 */}
+          <div className="print-table-footer">
+            <div className="print-gradient-divider"></div>
+            <div className="print-footer-info">
+              <div className="footer-left">
+                <strong>31ª Maratona SBC de Programação</strong> — Realização: FACOM / UFU • Promoção: SBC
+              </div>
+              <div className="footer-right">
+                Site oficial: <strong>maratona.sbc.org.br</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       {/* Toast de Feedback */}

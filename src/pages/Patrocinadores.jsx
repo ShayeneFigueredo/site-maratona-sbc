@@ -21,6 +21,7 @@ import imgBtg from "../assets/logos-patrocinador/btgpactual.png";
 import imgUnder from "../assets/logos-patrocinador/under.png";
 import imgRivio from "../assets/logos-patrocinador/rivio.png";
 import imgUfu from "../assets/logo-ufu-transparente-branco.png";
+import imgFapemig from "../assets/logos-patrocinador/fapemig.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -36,15 +37,12 @@ export default function Patrocinadores() {
       
       <h1 className="page-title">Nossos Patrocinadores</h1>
 
-      {/* --- PATROCINADORES GLOBAIS E MULTIRREGIONAIS --- */}
+      {/* --- PATROCINADOR GLOBAL E MULTIRREGIONAL --- */}
       <div className="mundial-container">
         <div className="mundial-header">
-          <h3>Patrocinadores Globais e Multirregionais</h3>
+          <h3>Patrocinador Global e Multirregional</h3>
         </div>
         <div className="mundial-logos">
-          <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer">
-            <img src={imgHuawei} alt="Huawei" className="logo-mundial" />
-          </a>
           <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
             <img src={imgJetbrains} alt="Jetbrains" className="logo-mundial" />
           </a>
@@ -88,6 +86,9 @@ export default function Patrocinadores() {
         <div className="tier-section tier-prata">
           <div className="tier-badge">Prata</div>
           <div className="tier-grid">
+            <a href="https://www.huawei.com/en/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgHuawei} alt="Huawei" />
+            </a>
             <a href="https://www.stone.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgStone} alt="Stone" />
             </a>
@@ -126,6 +127,9 @@ export default function Patrocinadores() {
           <div className="tier-grid">
             <a href="https://www.uberlandia.mg.gov.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgPrefeitura} alt="Prefeitura de Uberlândia" />
+            </a>
+            <a href="https://fapemig.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgFapemig} alt="FAPEMIG" />
             </a>
             <a href="https://www.gov.br/capes/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgCapes} alt="CAPES" />
