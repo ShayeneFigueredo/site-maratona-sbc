@@ -35,16 +35,16 @@ body {
 /* --- Layout Components: Navbar & Sidebar --- */
 .navbar {
   position: fixed;
-  top: 30px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  padding: 15px 40px;
+  width: 92%;
+  max-width: 1320px;
+  padding: 12px 30px;
   z-index: 1000;
   background-color: rgba(30, 30, 30, 0.219);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.318);
   display: flex;
@@ -63,15 +63,25 @@ body {
   align-items: center;
   gap: 10px;
   font-weight: 2000;
-  font-size: 15px;
+  font-size: 13.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  margin-left: 2rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: 0.83rem;
+  opacity: 0.85;
+  white-space: nowrap;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -284,6 +294,10 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btns {
     align-items: center;
   }
 
@@ -838,6 +852,14 @@ body {
   transform: scale(1.05);
 }
 
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
 .hero-date-location {
   font-family: 'Anta', sans-serif;
   font-size: 18px;
@@ -846,6 +868,31 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
+}
+
+.btn-hero-inscricao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #ff4500, #ff8c00);
+  color: white;
+  font-family: 'Anta', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 14px 38px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 20px rgba(255, 106, 0, 0.45);
+  transition: all 0.3s ease;
+}
+
+.btn-hero-inscricao:hover {
+  box-shadow: 0px 6px 28px rgba(255, 106, 0, 0.75);
+  transform: translateY(-2px) scale(1.04);
+  color: white;
 }
 
 /* Botões Secundários (Azul Escuro/Borda Gradiente estilo o botão de Login/Registro) */
@@ -1016,7 +1063,53 @@ body {
 
 /* --- Media Queries (Responsiveness) --- */
 
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 0.85rem;
+  }
+  .nav-links a {
+    font-size: 0.78rem;
+  }
+  .logo {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 1024px) {
+  .navbar {
+    width: 90%;
+    padding: 14px 25px;
+    top: 20px;
+    border-radius: 40px;
+  }
+  
+  .logo {
+    font-size: 12px; 
+    max-width: 75%; 
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-icon {
+    display: flex;
+    align-items: center;
+    font-size: 22px; 
+    color: white;
+  }
+
+  .mobile-sidebar {
+    width: 220px; 
+    gap: 28px;
+    padding-top: 90px; 
+  }
+  .mobile-sidebar a {
+    font-size: 0.95rem; 
+  }
+
   .hero-container {
     flex-direction: column;
     text-align: center;

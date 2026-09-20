@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import sbc from "../assets/sbc.webp";
 import maratona from "../assets/maratona.png";
 import facom from "../assets/facom.png";
@@ -19,6 +20,9 @@ export default function Hero() {
           
           <div className="hero-btns">
              <span className="hero-date-location">05 a 08 de novembro de 2026 - Uberlândia/MG</span>
+             <Link to="/inscricoes" className="btn-hero-inscricao">
+               Faça sua Inscrição
+             </Link>
           </div>
         </div>
 

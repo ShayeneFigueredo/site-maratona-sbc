@@ -58,7 +58,7 @@ export default function Inscricoes() {
     },
     {
       num: "05",
-      texto: "Após a conclusão, aguarde o contato da equipe organizador para confirmar a inscrição e fazer o pagamento.",
+      texto: "Após a conclusão, aguarde o contato da equipe organizadora para confirmar a inscrição e fazer o pagamento.",
     },
   ];
 

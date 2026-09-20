@@ -39,10 +39,11 @@ export default function Footer() {
             <h3>LINKS RÁPIDOS</h3>
           </div>
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#programacao">Programação</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="/">Início</a></li>
+            <li><a href="/#sobre">Sobre</a></li>
+            <li><a href="/#programacao">Programação</a></li>
+            <li><a href="/inscricoes">Inscrições</a></li>
+            <li><a href="/#contato">Contato</a></li>
           </ul>
         </div>
 

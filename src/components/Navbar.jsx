@@ -32,7 +32,7 @@ export default function Navbar() {
           <Link to="/#sobre">Sobre</Link>
           <Link to="/#final2026">Final 2026</Link>
           <Link to="/#programacao">Programação</Link>
-          
+          <Link to="/inscricoes">Inscrições</Link>
           <Link to="/patrocinadores">Patrocinadores</Link>
           <Link to="/organizadores">Organizadores</Link>
           <Link to="/locais">Locais</Link>
@@ -54,6 +54,7 @@ export default function Navbar() {
         <Link to="/#sobre" onClick={toggleMenu}>Sobre</Link>
         <Link to="/#final2026" onClick={toggleMenu}>Final 2026</Link>
         <Link to="/#programacao" onClick={toggleMenu}>Programação</Link>
+        <Link to="/inscricoes" onClick={toggleMenu}>Inscrições</Link>
         <Link to="/patrocinadores" onClick={toggleMenu}>Patrocinadores</Link>
         <Link to="/organizadores" onClick={toggleMenu}>Organizadores</Link>
         <Link to="/locais" onClick={toggleMenu}>Locais</Link>

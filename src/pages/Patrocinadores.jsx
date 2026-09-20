@@ -37,10 +37,10 @@ export default function Patrocinadores() {
       
       <h1 className="page-title">Nossos Patrocinadores</h1>
 
-      {/* --- PATROCINADOR GLOBAL E MULTIRREGIONAL --- */}
+      {/* --- PATROCINADOR GLOBAL --- */}
       <div className="mundial-container">
         <div className="mundial-header">
-          <h3>Patrocinador Global e Multirregional</h3>
+          <h3>Patrocinador Global</h3>
         </div>
         <div className="mundial-logos">
           <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer">
