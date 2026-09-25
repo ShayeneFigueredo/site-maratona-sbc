@@ -22,6 +22,7 @@ import imgUnder from "../assets/logos-patrocinador/under.png";
 import imgRivio from "../assets/logos-patrocinador/rivio.png";
 import imgUfu from "../assets/logo-ufu-transparente-branco.png";
 import imgFapemig from "../assets/logos-patrocinador/fapemig.png";
+import imgRs from "../assets/logos-patrocinador/LOGO - RS HORIZONTAL.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -140,6 +141,9 @@ export default function Patrocinadores() {
             <a href="https://ufu.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgUfu} alt="UFU - Universidade Federal de Uberlândia" />
             </a>
+            <div className="sponsor-card-small">
+              <img src={imgRs} alt="RS" />
+            </div>
           </div>
         </div>
 

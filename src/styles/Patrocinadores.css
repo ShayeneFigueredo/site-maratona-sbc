@@ -252,6 +252,16 @@
   transform: scale(1.05);
 }
 
+.rs-logo-large {
+  max-width: 250px !important;
+  max-height: 100px !important;
+  transform: scale(1.5);
+}
+
+.sponsor-card-small:hover .rs-logo-large {
+  transform: scale(1.6) !important;
+}
+
 .tier-diamante .sponsor-card-small:hover::before { background: linear-gradient(135deg, var(--neon-cyan) 0%, transparent 100%); padding: 2px;}
 .tier-prata .sponsor-card-small:hover::before   { background: linear-gradient(135deg, #c0c0c0 0%, transparent 100%); padding: 2px;}
 .tier-bronze .sponsor-card-small:hover::before  { background: linear-gradient(135deg, #cd7f32 0%, transparent 100%); padding: 2px;}

@@ -25,6 +25,10 @@ import ronaldoO from "../assets/organizadores/local/ronaldo-o.jpeg";
 import samuelA from "../assets/organizadores/local/samuel-a.jpg";
 import shayeneF from "../assets/organizadores/local/shayene-f.jpg";
 import luizC from "../assets/organizadores/local/luiz-t.jpeg";
+import joaoG from "../assets/organizadores/local/joao-g.jpg";
+import sophiaL from "../assets/organizadores/local/sophia-l.jpg";
+import isabelaD from "../assets/organizadores/local/isabela-d.jpeg";
+import lorenaI from "../assets/organizadores/local/lorena-i.jpg";
 
 // Imagem padrão para os membros
 import peopleImg from "../assets/organizadores/people.webp";
@@ -49,6 +53,10 @@ export default function Organizadores() {
     { nome: "Samuel Amorim", cargo: "Desenvolvedor Web / Transmissão", foto: samuelA },
     { nome: "Shayene Figueredo", cargo: "Desenvolvedora Web / Transmissão", foto: shayeneF },
     { nome: "Mariana Martins", cargo: "Designer" },
+    { nome: "João Gabriel Rodrigues", cargo: "Coordenador Geral", foto: joaoG },
+    { nome: "Sophia Ladir", cargo: "Recreação", foto: sophiaL },
+    { nome: "Isabela Dantas", cargo: "Mídia e Documentação", foto: isabelaD },
+    { nome: "Lorena Izidoro", cargo: "Equipe de apoio/Credenciamento/Atrações culturais", foto: lorenaI },
   ];
 
   return (
