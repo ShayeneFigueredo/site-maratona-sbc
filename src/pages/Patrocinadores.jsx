@@ -23,6 +23,7 @@ import imgRivio from "../assets/logos-patrocinador/rivio.png";
 import imgUfu from "../assets/logo-ufu-transparente-branco.png";
 import imgFapemig from "../assets/logos-patrocinador/fapemig.png";
 import imgRs from "../assets/logos-patrocinador/LOGO - RS HORIZONTAL.png";
+import imgSmit from "../assets/logos-patrocinador/smit.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -140,6 +141,9 @@ export default function Patrocinadores() {
             </a>
             <a href="https://ufu.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgUfu} alt="UFU - Universidade Federal de Uberlândia" />
+            </a>
+            <a href="https://smit.net.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgSmit} alt="SMIT - Soluções Mobile e Inovações Tecnológicas" />
             </a>
             <div className="sponsor-card-small">
               <img src={imgRs} alt="RS" />

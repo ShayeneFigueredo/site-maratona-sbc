@@ -23,12 +23,15 @@ import emilioW from "../assets/organizadores/nacional/emilio-w.webp";
 import rafaelA from "../assets/organizadores/local/rafael-a.GIF";
 import ronaldoO from "../assets/organizadores/local/ronaldo-o.jpeg";
 import samuelA from "../assets/organizadores/local/samuel-a.jpg";
-import shayeneF from "../assets/organizadores/local/shayene-f.jpg";
+import shayeneF from "../assets/organizadores/local/shayene-f.PNG";
 import luizC from "../assets/organizadores/local/luiz-t.jpeg";
 import joaoG from "../assets/organizadores/local/joao-g.jpg";
 import sophiaL from "../assets/organizadores/local/sophia-l.jpg";
 import isabelaD from "../assets/organizadores/local/isabela-d.jpeg";
 import lorenaI from "../assets/organizadores/local/lorena-i.jpg";
+import marianaM from "../assets/organizadores/local/mariana.jpeg";
+import luisG from "../assets/organizadores/local/WhatsApp Image 2026-08-19 at 20.17.09 (1) - Luis Felipe Garcia de Souza Paim.jpeg";
+import isabelaR from "../assets/organizadores/local/DSC_2172 - Isabela Rocha.JPG";
 
 // Imagem padrão para os membros
 import peopleImg from "../assets/organizadores/people.webp";
@@ -50,13 +53,15 @@ export default function Organizadores() {
     { nome: "Luiz Cláudio Theodoro", cargo: "Diretor da Final Brasileira", foto: luizC },
     { nome: "Rafael Dias Araújo", cargo: "Diretor da Final Brasileira", foto: rafaelA },
     { nome: "Ronaldo Castro de Oliveira", cargo: "Diretor da Final Brasileira", foto: ronaldoO },
+    { nome: "João Gabriel Rodrigues", cargo: "Coordenador Geral", foto: joaoG },
     { nome: "Samuel Amorim", cargo: "Desenvolvedor Web / Transmissão", foto: samuelA },
     { nome: "Shayene Figueredo", cargo: "Desenvolvedora Web / Transmissão", foto: shayeneF },
-    { nome: "Mariana Martins", cargo: "Designer" },
-    { nome: "João Gabriel Rodrigues", cargo: "Coordenador Geral", foto: joaoG },
+    { nome: "Mariana Martins", cargo: "Designer", foto: marianaM },
     { nome: "Sophia Ladir", cargo: "Recreação", foto: sophiaL },
     { nome: "Isabela Dantas", cargo: "Mídia e Documentação", foto: isabelaD },
     { nome: "Lorena Izidoro", cargo: "Equipe de apoio/Credenciamento/Atrações culturais", foto: lorenaI },
+    { nome: "Luis Felipe Garcia", cargo: "Staff", foto: luisG },
+    { nome: "Isabela Rocha", cargo: "Mídia/Organização", foto: isabelaR },
   ];
 
   return (
