@@ -180,6 +180,18 @@
   box-shadow: 0 0 15px rgba(205, 127, 50, 0.1);
 }
 
+.tier-apoio .tier-badge {
+  color: #00e676;
+  border-color: rgba(0, 230, 118, 0.4);
+  box-shadow: 0 0 15px rgba(0, 230, 118, 0.1);
+}
+
+.tier-transmissao .tier-badge {
+  color: #bf55ec;
+  border-color: rgba(191, 85, 236, 0.4);
+  box-shadow: 0 0 15px rgba(191, 85, 236, 0.1);
+}
+
 .tier-infra .tier-badge {
   color: var(--neon-blue); 
   border-color: rgba(41, 98, 255, 0.4);
@@ -267,6 +279,12 @@
 .tier-bronze .sponsor-card-small:hover::before  { background: linear-gradient(135deg, #cd7f32 0%, transparent 100%); padding: 2px;}
 .tier-infra .sponsor-card-small:hover::before { 
   background: linear-gradient(135deg, var(--neon-blue) 0%, transparent 100%); padding: 2px;
+}
+.tier-apoio .sponsor-card-small:hover::before { 
+  background: linear-gradient(135deg, #00e676 0%, transparent 100%); padding: 2px;
+}
+.tier-transmissao .sponsor-card-small:hover::before { 
+  background: linear-gradient(135deg, #bf55ec 0%, transparent 100%); padding: 2px;
 }
 .tier-logistico .sponsor-card-small:hover::before { 
   background: linear-gradient(135deg, var(--neon-orange) 0%, transparent 100%); padding: 2px;

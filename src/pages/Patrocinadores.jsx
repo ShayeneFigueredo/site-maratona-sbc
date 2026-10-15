@@ -24,6 +24,9 @@ import imgUfu from "../assets/logo-ufu-transparente-branco.png";
 import imgFapemig from "../assets/logos-patrocinador/fapemig.png";
 import imgRs from "../assets/logos-patrocinador/LOGO - RS HORIZONTAL.png";
 import imgSmit from "../assets/logos-patrocinador/smit.png";
+import imgAlgar from "../assets/logos-patrocinador/algar-logo.png";
+import imgBrain from "../assets/logos-patrocinador/brain.png";
+import imgViasoft from "../assets/logos-patrocinador/viasoft.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -123,6 +126,19 @@ export default function Patrocinadores() {
           </div>
         </div>
 
+        {/* --- APOIO --- */}
+        <div className="tier-section tier-apoio">
+          <div className="tier-badge badge-apoio">Apoio</div>
+          <div className="tier-grid">
+            <a href="https://algar.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgAlgar} alt="Algar" />
+            </a>
+            <a href="https://inovacaobrain.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgBrain} alt="Brain" />
+            </a>
+          </div>
+        </div>
+
         {/* --- APOIO INSTITUCIONAL --- */}
         <div className="tier-section tier-infra">
           <div className="tier-badge badge-infra">Apoio Institucional</div>
@@ -148,6 +164,16 @@ export default function Patrocinadores() {
             <div className="sponsor-card-small">
               <img src={imgRs} alt="RS" />
             </div>
+          </div>
+        </div>
+
+        {/* --- APOIO TRANSMISSÃO --- */}
+        <div className="tier-section tier-transmissao">
+          <div className="tier-badge badge-transmissao">Apoio Transmissão</div>
+          <div className="tier-grid">
+            <a href="https://www.viasoft.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgViasoft} alt="Viasoft" />
+            </a>
           </div>
         </div>
 

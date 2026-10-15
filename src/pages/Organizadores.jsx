@@ -32,6 +32,8 @@ import lorenaI from "../assets/organizadores/local/lorena-i.jpg";
 import marianaM from "../assets/organizadores/local/mariana.jpeg";
 import luisG from "../assets/organizadores/local/WhatsApp Image 2026-08-19 at 20.17.09 (1) - Luis Felipe Garcia de Souza Paim.jpeg";
 import isabelaR from "../assets/organizadores/local/DSC_2172 - Isabela Rocha.JPG";
+import lucasM from "../assets/organizadores/local/foto_lucasmendes - Lucax Desu.jpg";
+import joaoGuilherme from "../assets/organizadores/local/joao-guilherme.jpeg";
 
 // Imagem padrão para os membros
 import peopleImg from "../assets/organizadores/people.webp";
@@ -62,6 +64,8 @@ export default function Organizadores() {
     { nome: "Lorena Izidoro", cargo: "Equipe de apoio/Credenciamento/Atrações culturais", foto: lorenaI },
     { nome: "Luis Felipe Garcia", cargo: "Staff", foto: luisG },
     { nome: "Isabela Rocha", cargo: "Mídia/Organização", foto: isabelaR },
+    { nome: "Lucas Mendes", cargo: "Operacional / Financeiro", foto: lucasM },
+    { nome: "João Guilherme", cargo: "Sistema", foto: joaoGuilherme },
   ];
 
   return (
