@@ -27,6 +27,7 @@ import imgSmit from "../assets/logos-patrocinador/smit.png";
 import imgAlgar from "../assets/logos-patrocinador/algar-logo.png";
 import imgBrain from "../assets/logos-patrocinador/brain.png";
 import imgViasoft from "../assets/logos-patrocinador/viasoft.png";
+import imgCalriz from "../assets/logos-patrocinador/calriz-google.84e862efbacefef8917e.png";
 
 // Importações Decorativas
 import imgLineYellow from "../assets/line-yellowpt.png";
@@ -136,6 +137,15 @@ export default function Patrocinadores() {
             <a href="https://inovacaobrain.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgBrain} alt="Brain" />
             </a>
+            <a href="https://smit.net.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgSmit} alt="SMIT - Soluções Mobile e Inovações Tecnológicas" />
+            </a>
+            <div className="sponsor-card-small">
+              <img src={imgRs} alt="Grupo RS" />
+            </div>
+            <a href="https://calriz.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgCalriz} alt="Calriz" />
+            </a>
           </div>
         </div>
 
@@ -158,12 +168,6 @@ export default function Patrocinadores() {
             <a href="https://ufu.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgUfu} alt="UFU - Universidade Federal de Uberlândia" />
             </a>
-            <a href="https://smit.net.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgSmit} alt="SMIT - Soluções Mobile e Inovações Tecnológicas" />
-            </a>
-            <div className="sponsor-card-small">
-              <img src={imgRs} alt="RS" />
-            </div>
           </div>
         </div>
 
