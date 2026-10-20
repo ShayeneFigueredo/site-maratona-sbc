@@ -108,6 +108,9 @@ export default function Patrocinadores() {
             <a href="https://alphabot.com.br/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgAlphabo} alt="Alphabot" />
             </a>
+            <a href="https://calriz.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
+              <img src={imgCalriz} alt="Calriz" />
+            </a>
             <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
               <img src={imgGoogle} alt="Google" />
             </a>
@@ -143,9 +146,6 @@ export default function Patrocinadores() {
             <div className="sponsor-card-small">
               <img src={imgRs} alt="Grupo RS" />
             </div>
-            <a href="https://calriz.com/" target="_blank" rel="noopener noreferrer" className="sponsor-card-small">
-              <img src={imgCalriz} alt="Calriz" />
-            </a>
           </div>
         </div>
 
